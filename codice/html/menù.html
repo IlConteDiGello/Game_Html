@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+
+    <!--  queste linee di codice sono il PRELOAD, che serve a caricare prima dell'apertura della pagine i font da usare,
+      cosi che quando la scritta principale switcha tra font e font non venga rimpiazzato da uno già caricato di default
+      oppure che la transizione avvenga lentamente siccome il browser non ha ancora scaricato i dati necessari.
+    -->
+    
+    <link rel="preload" href="fonts/ANDYB.TTF" as="font" type="font/ttf" crossorigin>  
+    <link rel="preload" href="fonts/Teacher_Sez_by_smartalecvt.ttf" as="font/ttf" type="font/ttf" crossorigin>
+    <link rel="preload" href="fonts/JAPAB___.TTF" as="font" type="font/ttf" crossorigin>
+    <link rel="preload" href="fonts/wingding.ttf" as="font" type="font/ttf" crossorigin>
+    <link rel="preload" href="fonts/JFRingmaster.ttf" as="font" type="font/ttf" crossorigin>
+    <link rel="preload" href="fonts/Mostwasted.ttf" as="font" type="font/ttf" crossorigin>
+    <link rel="preload" href="fonts/zealot.ttf" as="font" type="font/ttf" crossorigin>
+
+    <meta charset="UTF-8">
+    <title id="title">Schizzofrenia</title>
+    <style>
+        /* da qui, tutti i righi che iniziano com @font-face servono a caricare i font salvati dentro al sistema,
+        le righe di prima sono il PRELOAD, cioè servono ad evitare ritardi, queste servono a trovare i font veri e propri*/
+        @font-face {
+        font-family: 'Andy';        
+        src: url('../fonts/ANDYB.TTF') format('truetype');
+        }
+
+        @font-face {
+        font-family: 'teacher';
+        src: url('../../fonts/Teacher_Sez_by_smartalecvt.ttf') format('truetype');
+        }
+
+        @font-face {
+        font-family: 'japab';
+        src: url('../../fonts/JAPAB___.TTF') format('truetype');
+        }
+
+        @font-face {
+        font-family: 'wingdings';
+        src: url('../../fonts/wingding.ttf') format('truetype');
+        }
+
+        @font-face {
+        font-family: 'Ringmaster';
+        src: url('../../fonts/JFRingmaster.ttf') format('truetype');
+        }
+
+        @font-face {
+        font-family: 'wasted';
+        src: url('../../fonts/Mostwasted.ttf') format('truetype');
+        }
+
+        @font-face {
+        font-family: 'zealot';
+        src: url('../../fonts/zealot.ttf') format('truetype');
+        }
+
+
+        .gametitle {
+            font-size: 5rem;
+            transition: font-family 0.5s;
+            margin-top: 50px;
+        }
+        
+        /* su queste righe setto la posizione relativa del menu, cosi non intralcia i bottoni,
+        altrimenti verrebbero spostati quando il titolo cambia di grandezza*/
+        .menu{
+            position: relative;
+            margin:0;
+            justify-content: center;
+            align-items: start;
+            height: 100px;
+            font-size: 2rem;
+            display: flex;
+        }
+
+        /* setto posizione assoluta sui bott oni cosi rimangono sempre fissi in un punto*/
+        .Bottoni {
+            position: fixed;
+            bottom: 300px;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+}
+    </style>
+
+
+</head>
+
+<body>
+
+    <div class="menu">
+        <h1 id="gametitle"> Schizzofrenia </h1>
+
+        <div class="Bottoni">
+            <button onclick="window.location.href='stanza1.html'">Inizia!!!!!</button>
+            <button>Crediti</button>
+            <button>Schizzofrenia</button>
+        </div>
+
+    </div>
+
+    <script>
+        const title = document.getElementById("gametitle");
+
+        const fonts = ['Andy', 'teacher', 'japab', 'wingdings', 'Ringmaster', 'wasted', 'zealot'];
+
+        let index = 0;
+
+        setInterval(() => {
+            title.style.fontFamily = fonts[index];
+            index = (index+1) % fonts.length;
+        }, 250);
+
+    </script>
+
+</body>
+
+</html>
