@@ -1,15 +1,64 @@
 <!DOCTYPE html>
-<html lang="">
+<html>
+    <title id="porta/finestra"> routine </title>
+    <style>
+        .getup{
+            position: fixed;
+            bottom: 85%;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+            font-size: 4rem;
+        }
 
-<head>
-  <meta charset="utf-8">
-  <title>Camera</title>
-  <script type="text/javascript" src="../js/funzioni.js"></script>
-</head>
+        .porta{
+            position: fixed;
+            top: 40%;
+            left: 10%;
+            transform: translateX(-50%);
+            text-align: center;
+            font-size: 25px;
+        }
 
+<<<<<<< HEAD
 <body>
   <input type="button" value="Vai nel corridoio" onclick="apri('Corridoio.html')">
   <input type="button" value="Affacciati alla finestra" onclick="apri('Finestra.html')">
 </body>
+=======
+        .snake {
+            position: fixed;
+            top: 250px;
+            right: 5px;
+            height: 100px;
+            width: 200px;
+            transform: translateX(-50%);
+            text-align: center;
+            font-size: 25px;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+        }
+>>>>>>> refs/remotes/origin/master
 
-</html>
+    </style>
+
+    <body>
+
+        <button class="porta" onclick="Porta()">esci dalla porta</button>
+
+        <button class="snake" onclick="finestra()"></button>
+        <script>
+            function Porta(){
+                window.location.href = "Boss_Porta.html";
+            }
+            
+        </script>
+
+        <script>
+            function finestra(){
+                window.location.href = "finestra.html";
+            }
+            </script>
+    </body>
+        </html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="utf-8">
+  <title>prova</title>
+  <script type="text/javascript" src="../js/funzioni.js"></script>
+</head>
+
+<style>
+    .sasso{
+        position: fixed;
+        bottom: 40%;
+        left: 43%;
+        transform: translateX(-50%);
+        text-align: center;
+        font-size: 2rem;
+    }
+
+    .carta{
+        position: fixed;
+        bottom: 40%;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+        font-size: 2rem;
+    }
+
+    .forbice{
+        position: fixed;
+        bottom: 40%;
+        left: 57%;
+        transform: translateX(-50%);
+        text-align: center;
+        font-size: 2rem;
+    }
+</style>
+
+<body>
+  <input type="button" name="sasso" value="sasso" onclick="saCaFo(0)" class="sasso">
+  <input type="button" name="carta" value="carta" onclick="saCaFo(1)" class="carta">
+  <input type="button" name="forbici" value="forbici" onclick="saCaFo(2)" class="forbice">
+</body>
+
+</html>
