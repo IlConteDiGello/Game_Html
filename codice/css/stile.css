@@ -29,3 +29,35 @@
   text-align: center;
   font-size: 2rem;
 }
+
+.getup {
+  position: fixed;
+  bottom: 85%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  font-size: 4rem;
+}
+
+.porta {
+  position: fixed;
+  top: 40%;
+  left: 10%;
+  transform: translateX(-50%);
+  text-align: center;
+  font-size: 25px;
+}
+
+.snake {
+  position: fixed;
+  top: 250px;
+  right: 5px;
+  height: 100px;
+  width: 200px;
+  transform: translateX(-50%);
+  text-align: center;
+  font-size: 25px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
