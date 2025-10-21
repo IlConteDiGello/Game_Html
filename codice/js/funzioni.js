@@ -11,3 +11,7 @@ function saCaFo(input) {
   if (computer == 2 && input == 0 || computer == 2 && input == 1 || computer == 1 && input == 2)
     alert('giocatore');
 }
+
+function apri(pagina){
+  window.open(pagina, '_self');
+}
