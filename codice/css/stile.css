@@ -221,8 +221,15 @@
  }
 
 .background{
-  background-repeat: no-repeat;
-  background-size: cover;
+  /*background-repeat: no-repeat;
+  background-size: cover;*/
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover; /* serve a far adattare l'immagine allo schermo */
+  z-index: -1; /* fa andare lìimmagine dietro tutti gli altri elementi */
 }
                       /*  */
 #bottonebosscereale{
