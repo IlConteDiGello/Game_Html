@@ -4,52 +4,53 @@
 
 <head>
 
-    <!--  queste linee di codice sono il PRELOAD, che serve a caricare prima dell'apertura della pagine i font da usare,
+  <!--  queste linee di codice sono il PRELOAD, che serve a caricare prima dell'apertura della pagine i font da usare,
       cosi che quando la scritta principale switcha tra font e font non venga rimpiazzato da uno già caricato di default
       oppure che la transizione avvenga lentamente siccome il browser non ha ancora scaricato i dati necessari.
     -->
-    
-    <link rel="preload" href="fonts/ANDYB.TTF" as="font" type="font/ttf" crossorigin>  
-    <link rel="preload" href="fonts/Teacher_Sez_by_smartalecvt.ttf" as="font/ttf" type="font/ttf" crossorigin>
-    <link rel="preload" href="fonts/JAPAB___.TTF" as="font" type="font/ttf" crossorigin>
-    <link rel="preload" href="fonts/wingding.ttf" as="font" type="font/ttf" crossorigin>
-    <link rel="preload" href="fonts/JFRingmaster.ttf" as="font" type="font/ttf" crossorigin>
-    <link rel="preload" href="fonts/Mostwasted.ttf" as="font" type="font/ttf" crossorigin>
-    <link rel="preload" href="fonts/zealot.ttf" as="font" type="font/ttf" crossorigin>
 
-    <meta charset="UTF-8">
-    <title id="title">Schizzofrenia</title>
+  <link rel="preload" href="fonts/ANDYB.TTF" as="font" type="font/ttf" crossorigin>
+  <link rel="preload" href="fonts/Teacher_Sez_by_smartalecvt.ttf" as="font/ttf" type="font/ttf" crossorigin>
+  <link rel="preload" href="fonts/JAPAB___.TTF" as="font" type="font/ttf" crossorigin>
+  <link rel="preload" href="fonts/wingding.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="preload" href="fonts/JFRingmaster.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="preload" href="fonts/Mostwasted.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="preload" href="fonts/zealot.ttf" as="font" type="font/ttf" crossorigin>
 
-    <link rel="stylesheet" href="../css/stile.css">
+  <meta charset="UTF-8">
+  <title id="title">Schizzofrenia</title>
+
+  <link rel="stylesheet" href="../css/stile.css">
+  <script type="text/javascript" src="../js/funzioni.js"></script>
 
 </head>
 
 <body>
 
-    <div class="menu">
-        <h1 id="gametitle"> Schizzofrenia </h1>
+  <div class="menu">
+    <h1 id="gametitle"> Schizzofrenia </h1>
 
-        <div class="Bottoni">
-            <button id="inizio"onclick="window.location.href='sdraiato.html'">Inizia!!!!!</button>
-            <button id ="crediti">Crediti</button>
-            <button id="schizzofrenia">Schizzofrenia</button>
-        </div>
-
+    <div class="Bottoni">
+      <button id="inizio" onclick="window.location.href='sdraiato.html'">Inizia!!!!!</button>
+      <button id="crediti">Crediti</button>
+      <button id="schizzofrenia">Schizzofrenia</button>
     </div>
 
-    <script>
-        const title = document.getElementById("gametitle");
+  </div>
 
-        const fonts = ['Andy', 'teacher', 'japab', 'wingdings', 'Ringmaster', 'wasted', 'zealot'];
+  <script>
+    const title = document.getElementById("gametitle");
 
-        let index = 0;
+    const fonts = ['Andy', 'teacher', 'japab', 'wingdings', 'Ringmaster', 'wasted', 'zealot'];
 
-        setInterval(() => {
-            title.style.fontFamily = fonts[index];
-            index = (index+1) % fonts.length;
-        }, 250);
+    let index = 0;
 
-    </script>
+    setInterval(() => {
+      title.style.fontFamily = fonts[index];
+      index = (index + 1) % fonts.length;
+    }, 250);
+
+  </script>
 
 </body>
 

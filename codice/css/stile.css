@@ -1,239 +1,228 @@
  /* QUESTO è UN FILE .CSS DOVE ABBIAMO MESSO TUTTE LE ESTETICHE E I FONT DA CARICARE PER LA SCHERMATA DI TITOLO
  ALL'INIZIO DI OGNI FILE LO STILE VIENE PRESO DA QUI TRAMITE LA LINEA DI CODICE:
-<    link rel="stylesheet" href="../css/stile.css">      */ 
-  
-  
-  
-  /* MENU */ 
+<    link rel="stylesheet" href="../css/stile.css">      */
 
-/* da qui, tutti i righi che iniziano com @font-face servono a caricare i font salvati dentro al sistema,
+
+
+ /* MENU */
+
+ /* da qui, tutti i righi che iniziano com @font-face servono a caricare i font salvati dentro al sistema,
         le righe di prima sono il PRELOAD, cioè servono ad evitare ritardi, queste servono a trovare i font veri e propri*/
-        @font-face {
-        /*@font-face serve a specificare un font custom da caricare*/
-        font-family: 'Andy';        
-        src: url('../fonts/ANDYB.TTF') format('truetype');
-        }
+ @font-face {
+   /*@font-face serve a specificare un font custom da caricare*/
+   font-family: 'Andy';
+   src: url('../fonts/ANDYB.TTF') format('truetype');
+ }
 
-        @font-face {
-        font-family: 'teacher';
-        src: url('../../fonts/Teacher_Sez_by_smartalecvt.ttf') format('truetype');
-        }
+ @font-face {
+   font-family: 'teacher';
+   src: url('../../fonts/Teacher_Sez_by_smartalecvt.ttf') format('truetype');
+ }
 
-        @font-face {
-        font-family: 'japab';
-        src: url('../../fonts/JAPAB___.TTF') format('truetype');
-        }
+ @font-face {
+   font-family: 'japab';
+   src: url('../../fonts/JAPAB___.TTF') format('truetype');
+ }
 
-        @font-face {
-        font-family: 'wingdings';
-        src: url('../../fonts/wingding.ttf') format('truetype');
-        }
+ @font-face {
+   font-family: 'wingdings';
+   src: url('../../fonts/wingding.ttf') format('truetype');
+ }
 
-        @font-face {
-        font-family: 'Ringmaster';
-        src: url('../../fonts/JFRingmaster.ttf') format('truetype');
-        }
+ @font-face {
+   font-family: 'Ringmaster';
+   src: url('../../fonts/JFRingmaster.ttf') format('truetype');
+ }
 
-        @font-face {
-        font-family: 'wasted';
-        src: url('../../fonts/Mostwasted.ttf') format('truetype');
-        }
+ @font-face {
+   font-family: 'wasted';
+   src: url('../../fonts/Mostwasted.ttf') format('truetype');
+ }
 
-        @font-face {
-        font-family: 'zealot';
-        src: url('../../fonts/zealot.ttf') format('truetype');
-        }
+ @font-face {
+   font-family: 'zealot';
+   src: url('../../fonts/zealot.ttf') format('truetype');
+ }
 
 
-        #gametitle {
-            font-size: 5rem;
-            transition: font-family 0.5s;
-            margin-top: 50px;
-            top: 20%;
-        }
-        
-        /* su queste righe setto la posizione relativa del menu, cosi non intralcia i bottoni,
+ #gametitle {
+   font-size: 5rem;
+   transition: font-family 0.5s;
+   margin-top: 50px;
+   top: 20%;
+ }
+
+ /* su queste righe setto la posizione relativa del menu, cosi non intralcia i bottoni,
         altrimenti verrebbero spostati quando il titolo cambia di grandezza*/
-        .menu{
-            position: relative;
-            margin:0;
-            justify-content: center;
-            align-items: start;
-            height: 100px;
-            font-size: 2rem;
-            display: flex;
-        }
+ .menu {
+   position: relative;
+   margin: 0;
+   justify-content: center;
+   align-items: start;
+   height: 100px;
+   font-size: 2rem;
+   display: flex;
+ }
 
-        /* setto posizione assoluta sui bottoni cosi rimangono sempre fissi in un punto*/
+ /* setto posizione assoluta sui bottoni cosi rimangono sempre fissi in un punto*/
 
-        #inizio{
-            padding: 12px 20px;
-            padding: 12px 24px;
-            position: fixed;
-            bottom: 60%;
-            left: 50%;
-            transform: translateX(-50%);
-            text-align: center;
-            font-size: 3rem;     
-            background: transparent;       
-        }
+ #inizio {
+   padding: 12px 20px;
+   padding: 12px 24px;
+   position: fixed;
+   bottom: 60%;
+   left: 50%;
+   transform: translateX(-50%);
+   text-align: center;
+   font-size: 3rem;
+   background: transparent;
+ }
 
-        #crediti{
-            padding: 12px 20px;
-            position: fixed;
-            bottom: 50%;
-            left: 50%;
-            transform: translateX(-50%);
-            text-align: center;
-            font-size: 3rem;
-            background: transparent;
-        }
+ #crediti {
+   padding: 12px 20px;
+   position: fixed;
+   bottom: 50%;
+   left: 50%;
+   transform: translateX(-50%);
+   text-align: center;
+   font-size: 3rem;
+   background: transparent;
+ }
 
-        #schizzofrenia{
-            padding: 12px 20px;
-            position: fixed;
-            bottom: 40%;
-            left: 50%;
-            transform: translateX(-50%);
-            text-align: center;
-            font-size: 3rem;
-            background: transparent;
-        }
+ #schizzofrenia {
+   padding: 12px 20px;
+   position: fixed;
+   bottom: 40%;
+   left: 50%;
+   transform: translateX(-50%);
+   text-align: center;
+   font-size: 3rem;
+   background: transparent;
+ }
 
-                        /* QUANDO STAI SDRAIATO SUL LETTO */
-#bottonecamera {
-      padding: 12px 20px;
-      height: 100px;
-      width: 200px;
-      position: fixed;
-      top: 20%;
-      left: 10%;
-      transform: translateX(-50%);
-      text-align: center;
-      font-size: 25px;
-    }
+ /* QUANDO STAI SDRAIATO SUL LETTO */
+ #bottoneCamera {
+   padding: 12px 20px;
+   height: 100px;
+   width: 200px;
+   position: fixed;
+   top: 20%;
+   left: 10%;
+   transform: translateX(-50%);
+   text-align: center;
+   font-size: 25px;
+ }
 
-    .fade {
-      position: fixed;
-      width: 100vw;
-      height: 100vh;
-      top: 0;
-      left: 0;
-      background: black;
-      opacity: 0;
-      pointer-events: none;
-      transition: opacity 1s ease;
-    }
+ .fade {
+   position: fixed;
+   width: 100vw;
+   height: 100vh;
+   top: 0;
+   left: 0;
+   background: black;
+   opacity: 0;
+   pointer-events: none;
+   transition: opacity 1s ease;
+ }
 
-    .fade.active {
-      opacity: 1;
-    }
+ .fade.active {
+   opacity: 1;
+ }
 
-    #getup{
-        padding: 12px 20px;
-        position: fixed;
-        left: 50%;
-        top: 10%;
-        font-size: 3rem;
-    }
-
-
-                      /* MECCANICA BASE DI SASSO CARTA FORBICE */
-.sasso {
-  padding: 12px 20px;
-  position: fixed;
-  bottom: 40%;
-  left: 43%;
-  transform: translateX(-50%);
-  text-align: center;
-  font-size: 2rem;
-}
-
-.carta {
-  padding: 12px 20px;
-  position: fixed;
-  bottom: 40%;
-  left: 50%;
-  transform: translateX(-50%);
-  text-align: center;
-  font-size: 2rem;
-}
-
-.forbice {
-  padding: 12px 20px;
-  position: fixed;
-  bottom: 40%;
-  left: 57%;
-  transform: translateX(-50%);
-  text-align: center;
-  font-size: 2rem;
-}
+ #getup {
+   padding: 12px 20px;
+   position: fixed;
+   left: 50%;
+   top: 10%;
+   font-size: 3rem;
+ }
 
 
-                      /* QUA PER QUANDO SIAMO NEL CORRIDOIO */
-#bottonecucina{
-            padding: 12px 20px;
-            position: fixed;
-            bottom: 60%;
-            left: 50%;
-            transform: translateX(-50%);
-            text-align: center;
-            font-size: 4rem;
-        }
+ /* MECCANICA BASE DI SASSO CARTA FORBICE */
+ .sasso {
+   padding: 12px 20px;
+   position: fixed;
+   bottom: 40%;
+   left: 43%;
+   transform: translateX(-50%);
+   text-align: center;
+   font-size: 2rem;
+ }
 
-                      /* QUANDO SEI AFFACCIATO SULLA FINESTRA */
+ .carta {
+   padding: 12px 20px;
+   position: fixed;
+   bottom: 40%;
+   left: 50%;
+   transform: translateX(-50%);
+   text-align: center;
+   font-size: 2rem;
+ }
 
-#salta{
-            position: fixed;
-            bottom: 50%;
-            left: 50%;
-            transform: translateX(-50%);
-            text-align: center;
-            font-size: 4rem;
-        }        
+ .forbice {
+   padding: 12px 20px;
+   position: fixed;
+   bottom: 40%;
+   left: 57%;
+   transform: translateX(-50%);
+   text-align: center;
+   font-size: 2rem;
+ }
+
+
+ /* QUA PER QUANDO SIAMO NEL CORRIDOIO */
+ #bottoneCucina {
+   padding: 12px 20px;
+   position: fixed;
+   bottom: 60%;
+   left: 50%;
+   transform: translateX(-50%);
+   text-align: center;
+   font-size: 4rem;
+ }
+
+ /* QUANDO SEI AFFACCIATO SULLA FINESTRA */
+
+ #salta {
+   position: fixed;
+   bottom: 50%;
+   left: 50%;
+   transform: translateX(-50%);
+   text-align: center;
+   font-size: 4rem;
+ }
 
 #porta {
   padding: 12px 20px;
   position: fixed;
-  top: 30%;
+  top: 40%;
   left: 10%;
   transform: translateX(-50%);
   text-align: center;
   font-size: 25px;
 }
 
-                      /* QUESTO E' UN BOTTONE INVISIBLE, E' NELLA CAMERA E TI PORTA 
+ /* QUESTO E' UN BOTTONE INVISIBLE, E' NELLA CAMERA E TI PORTA 
                       ALLA FINESTRA PRIMA DI COMBATTERE CONTRO LA PORTA */
 
-#snake {
-  padding: 12px 20px;
-  position: fixed;
-  top: 250px;
-  right: 5px;
-  height: 100px;
-  width: 200px;
-  transform: translateX(-50%);
-  text-align: center;
-  font-size: 25px;
-  background: transparent;
-  border: none;
-  cursor: pointer;
-}
+ #snake {
+   padding: 12px 20px;
+   position: fixed;
+   top: 250px;
+   right: 5px;
+   height: 100px;
+   width: 200px;
+   transform: translateX(-50%);
+   text-align: center;
+   font-size: 25px;
+   background: transparent;
+   border: none;
+   cursor: pointer;
+ }
 
 .background{
-  /*margin: 50%;
-  height: 100%;
-  background-attachment: fixed; /* fa rimanere fissa anche se si scrolla */
-  /*background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;*/
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  object-fit: cover;  /* questo serve ad adattare le porporzioni */
-  z-index: -1;  /* questo lo manda dietro a tutti gli altri elementi */
+  background-size: cover;
 }
                       /*  */
 #bottonebosscereale{
