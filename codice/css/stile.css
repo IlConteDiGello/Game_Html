@@ -195,7 +195,7 @@
 #porta {
   padding: 12px 20px;
   position: fixed;
-  top: 40%;
+  top: 30%;
   left: 10%;
   transform: translateX(-50%);
   text-align: center;
@@ -221,8 +221,19 @@
 }
 
 .background{
+  /*margin: 50%;
+  height: 100%;
+  background-attachment: fixed; /* fa rimanere fissa anche se si scrolla */
+  /*background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: cover;*/
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;  /* questo serve ad adattare le porporzioni */
+  z-index: -1;  /* questo lo manda dietro a tutti gli altri elementi */
 }
                       /*  */
 #bottonebosscereale{
