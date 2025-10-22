@@ -1,3 +1,9 @@
+ /* QUESTO è UN FILE .CSS DOVE ABBIAMO MESSO TUTTE LE ESTETICHE E I FONT DA CARICARE PER LA SCHERMATA DI TITOLO
+ ALL'INIZIO DI OGNI FILE LO STILE VIENE PRESO DA QUI TRAMITE LA LINEA DI CODICE:
+<    link rel="stylesheet" href="../css/stile.css">      */ 
+  
+  
+  
   /* MENU */ 
 
 /* da qui, tutti i righi che iniziano com @font-face servono a caricare i font salvati dentro al sistema,
@@ -61,6 +67,8 @@
         /* setto posizione assoluta sui bottoni cosi rimangono sempre fissi in un punto*/
 
         #inizio{
+            padding: 12px 20px;
+            padding: 12px 24px;
             position: fixed;
             bottom: 60%;
             left: 50%;
@@ -71,6 +79,7 @@
         }
 
         #crediti{
+            padding: 12px 20px;
             position: fixed;
             bottom: 50%;
             left: 50%;
@@ -81,6 +90,7 @@
         }
 
         #schizzofrenia{
+            padding: 12px 20px;
             position: fixed;
             bottom: 40%;
             left: 50%;
@@ -92,6 +102,7 @@
 
                         /* QUANDO STAI SDRAIATO SUL LETTO */
 #bottonecamera {
+      padding: 12px 20px;
       height: 100px;
       width: 200px;
       position: fixed;
@@ -119,6 +130,7 @@
     }
 
     #getup{
+        padding: 12px 20px;
         position: fixed;
         left: 50%;
         top: 10%;
@@ -128,6 +140,7 @@
 
                       /* MECCANICA BASE DI SASSO CARTA FORBICE */
 .sasso {
+  padding: 12px 20px;
   position: fixed;
   bottom: 40%;
   left: 43%;
@@ -137,6 +150,7 @@
 }
 
 .carta {
+  padding: 12px 20px;
   position: fixed;
   bottom: 40%;
   left: 50%;
@@ -146,6 +160,7 @@
 }
 
 .forbice {
+  padding: 12px 20px;
   position: fixed;
   bottom: 40%;
   left: 57%;
@@ -157,6 +172,7 @@
 
                       /* QUA PER QUANDO SIAMO NEL CORRIDOIO */
 #bottonecucina{
+            padding: 12px 20px;
             position: fixed;
             bottom: 60%;
             left: 50%;
@@ -177,6 +193,7 @@
         }        
 
 #porta {
+  padding: 12px 20px;
   position: fixed;
   top: 40%;
   left: 10%;
@@ -189,6 +206,7 @@
                       ALLA FINESTRA PRIMA DI COMBATTERE CONTRO LA PORTA */
 
 #snake {
+  padding: 12px 20px;
   position: fixed;
   top: 250px;
   right: 5px;
@@ -208,6 +226,7 @@
 }
                       /*  */
 #bottonebosscereale{
+      padding: 12px 20px;
       position: fixed;
       bottom: 60%;
       left: 50%;
