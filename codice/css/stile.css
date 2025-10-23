@@ -68,7 +68,6 @@
 
  #inizio {
    padding: 12px 20px;
-   padding: 12px 24px;
    position: fixed;
    bottom: 60%;
    left: 50%;
@@ -111,6 +110,7 @@
    transform: translateX(-50%);
    text-align: center;
    font-size: 25px;
+   background: transparent;
  }
 
  .fade {
@@ -135,6 +135,7 @@
    left: 50%;
    top: 10%;
    font-size: 3rem;
+   background: transparent;
  }
 
 
@@ -147,6 +148,7 @@
    transform: translateX(-50%);
    text-align: center;
    font-size: 2rem;
+   background: transparent;
  }
 
  .carta {
@@ -157,6 +159,7 @@
    transform: translateX(-50%);
    text-align: center;
    font-size: 2rem;
+   background: transparent;
  }
 
  .forbice {
@@ -167,6 +170,7 @@
    transform: translateX(-50%);
    text-align: center;
    font-size: 2rem;
+   background: transparent;
  }
 
 
@@ -175,10 +179,33 @@
    padding: 12px 20px;
    position: fixed;
    bottom: 60%;
+   left: 10%;
+   transform: translateX(-50%);
+   text-align: center;
+   font-size: 2rem;
+   background: transparent;
+ }
+
+ #bottoneBagno{
+   padding: 12px 20px;
+   position: fixed;
+   bottom: 50%;
    left: 50%;
    transform: translateX(-50%);
    text-align: center;
-   font-size: 4rem;
+   font-size: 2rem;
+   background: transparent;
+ }
+
+ #bottoneGarage{
+   padding: 12px 20px;
+   position: fixed;
+   bottom: 50%;
+   left: 50%;
+   transform: translateX(-50%);
+   text-align: center;
+   font-size: 2rem;
+   background: transparent;
  }
 
  /* QUANDO SEI AFFACCIATO SULLA FINESTRA */
@@ -190,6 +217,7 @@
    transform: translateX(-50%);
    text-align: center;
    font-size: 4rem;
+   background: transparent;
  }
 
 #porta {
@@ -200,6 +228,7 @@
   transform: translateX(-50%);
   text-align: center;
   font-size: 25px;
+  background: transparent;
 }
 
  /* QUESTO E' UN BOTTONE INVISIBLE, E' NELLA CAMERA E TI PORTA 
@@ -220,18 +249,8 @@
    cursor: pointer;
  }
 
-.background{
-  /*background-repeat: no-repeat;
-  background-size: cover;*/
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  object-fit: cover; /* serve a far adattare l'immagine allo schermo */
-  z-index: -1; /* fa andare lìimmagine dietro tutti gli altri elementi */
-}
-                      /*  */
+
+                      /*  QUESTO BOTTONE FA INIZIARE LA BOSSFIGHT CONTRO I CEREALI */
 #bottonebosscereale{
       padding: 12px 20px;
       position: fixed;
@@ -240,4 +259,17 @@
       transform: translateX(-50%);
       text-align: center;
       font-size: 4rem;
+      background: transparent;
         }
+
+.background{
+  /*background-repeat: no-repeat;
+  background-size: cover;*/
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* serve a far adattare l'immagine allo schermo */
+  z-index: -1; /* fa andare lìimmagine dietro tutti gli altri elementi */
+}
