@@ -13,5 +13,15 @@ function saCaFo(input) {
 }
 
 function apri(pagina){
-  window.open(pagina, '_self');
+  let overlay = document.getElementById('overlay');
+  overlay.classList.remove('visible');
+  setTimeout(()=>{
+    window.open(pagina, '_self');
+  }, 500);
 }
+
+
+addEventListener('load', () => {
+  let overlay = document.getElementById('overlay');
+  overlay.classList.add('visible');
+})

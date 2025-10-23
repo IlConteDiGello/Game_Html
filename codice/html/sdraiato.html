@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+
 <html>
 
 <head>
@@ -7,23 +9,12 @@
 </head>
 
 <body>
-  <div class="fade" id="fade"></div>
   <div id="getup">Alzati dal letto.</div>
 
   <div> <img class="background" src="../immagini/sdraiato.png"></div>
-  <button id="bottonecamera"></button>
+  <div id="overlay"></div>
+  <button id="bottonecamera" onclick="apri('Camera.html')"></button>
 
-  <script>
-    const fade = document.getElementById("fade");
-    const bottonecamera = document.getElementById("bottonecamera");
-
-    bottonecamera.addEventListener("click", () => {
-      fade.classList.add("active");
-      setTimeout(() => {
-        window.location.href = "camera.html";
-      }, 500);
-    });
-  </script>
 </body>
 
 </html>
