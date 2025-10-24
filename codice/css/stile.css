@@ -69,33 +69,33 @@
  #inizio {
    padding: 12px 20px;
    position: fixed;
-   bottom: 60%;
+   bottom: 55%;
    left: 50%;
    transform: translateX(-50%);
    text-align: center;
-   font-size: 3rem;
+   font-size: 125%;
    background: transparent;
  }
 
  #crediti {
    padding: 12px 20px;
    position: fixed;
-   bottom: 50%;
+   bottom: 40%;
    left: 50%;
    transform: translateX(-50%);
    text-align: center;
-   font-size: 3rem;
+   font-size: 125%;
    background: transparent;
  }
 
  #schizzofrenia {
    padding: 12px 20px;
    position: fixed;
-   bottom: 40%;
+   bottom: 25%;
    left: 50%;
    transform: translateX(-50%);
    text-align: center;
-   font-size: 3rem;
+   font-size: 125%;
    background: transparent;
  }
 
@@ -109,7 +109,7 @@
    left: 10%;
    transform: translateX(-50%);
    text-align: center;
-   font-size: 25px;
+   font-size: 125%;
    background: transparent;
  }
 
@@ -134,7 +134,7 @@
    position: fixed;
    left: 50%;
    top: 10%;
-   font-size: 3rem;
+   font-size: 250%;
    background: transparent;
  }
 
@@ -147,7 +147,7 @@
    left: 43%;
    transform: translateX(-50%);
    text-align: center;
-   font-size: 2rem;
+   font-size: 150%;
    background: transparent;
  }
 
@@ -158,7 +158,7 @@
    left: 50%;
    transform: translateX(-50%);
    text-align: center;
-   font-size: 2rem;
+   font-size: 150%;
    background: transparent;
  }
 
@@ -169,7 +169,7 @@
    left: 57%;
    transform: translateX(-50%);
    text-align: center;
-   font-size: 2rem;
+   font-size: 150%;
    background: transparent;
  }
 
@@ -182,7 +182,7 @@
    left: 10%;
    transform: translateX(-50%);
    text-align: center;
-   font-size: 2rem;
+   font-size: 150%;
    background: transparent;
  }
 
@@ -193,7 +193,7 @@
    left: 50%;
    transform: translateX(-50%);
    text-align: center;
-   font-size: 2rem;
+   font-size: 150%;
    background: transparent;
  }
 
@@ -204,7 +204,7 @@
    left: 50%;
    transform: translateX(-50%);
    text-align: center;
-   font-size: 2rem;
+   font-size: 150%;
    background: transparent;
  }
 
@@ -216,7 +216,7 @@
    left: 50%;
    transform: translateX(-50%);
    text-align: center;
-   font-size: 4rem;
+   font-size: 250%;
    background: transparent;
  }
 
