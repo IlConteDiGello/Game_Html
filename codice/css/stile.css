@@ -113,22 +113,6 @@
    background: transparent;
  }
 
- .fade {
-   position: fixed;
-   width: 100vw;
-   height: 100vh;
-   top: 0;
-   left: 0;
-   background: black;
-   opacity: 0;
-   pointer-events: none;
-   transition: opacity 1s ease;
- }
-
- .fade.active {
-   opacity: 1;
- }
-
  #getup {
    padding: 12px 20px;
    position: fixed;
@@ -235,18 +219,39 @@
                       ALLA FINESTRA PRIMA DI COMBATTERE CONTRO LA PORTA */
 
  #snake {
-   padding: 12px 20px;
    position: fixed;
-   top: 250px;
-   right: 5px;
-   height: 100px;
-   width: 200px;
+   top: 1%;
+   right: 0%;
+   height: 70%;
+   width: 10%;
    transform: translateX(-50%);
    text-align: center;
    font-size: 25px;
    background: transparent;
    border: none;
    cursor: pointer;
+ }
+
+ #medicine{
+   padding: 12px 20px;
+   position: fixed;
+   top: 40%;
+   right: 10%;
+   transform: translateX(-50%);
+   text-align: center;
+   font-size: 25px;
+   background: transparent;
+ }
+
+ #indietroBagno{
+   padding: 12px 20px;
+   position: fixed;
+   bottom: 10%;
+   right: 50%;
+   transform: translateX(-50%);
+   text-align: center;
+   font-size: 25px;
+   background: transparent;
  }
 
 
@@ -262,9 +267,10 @@
    background: transparent;
  }
 
+ /* questa classe, .background, si riferisce a ogni singola immagine di sfondo
+ e setta le proprietà di uno sfondo a ognuna di esse, dicesi che occupano tutto lo schermo,
+ sono fisse, stanno dietro a tutti gli altri elementi*/
  .background {
-   /*background-repeat: no-repeat;
-  background-size: cover;*/
    position: fixed;
    top: 0;
    left: 0;
@@ -276,6 +282,9 @@
    /* fa andare lìimmagine dietro tutti gli altri elementi */
  }
 
+ /* overlay è l'oggetto che fa da transizione (fade to black) e sta davanti a tutto
+ è di sfondo nero, e ha 2 stati, in uno è visibile e sparisce lentamente,
+ ogni volta che viene cambiata stanza la sua opacità viene lentamente modificata*/
  #overlay {
    position: fixed;
    top: 0;

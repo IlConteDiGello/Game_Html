@@ -25,3 +25,29 @@ addEventListener('load', () => {
   let overlay = document.getElementById('overlay');
   overlay.classList.add('visible');
 })
+
+let presemedicine =false;
+
+function prendiMedicine(){
+  presemedicine=true;
+}
+
+function creaBottoneBossCereali(){
+  if(!presemedicine){
+    let bottone = document.createElement("button");
+
+    bottone.textContent = "Combatti contro la scatola di cereali";
+    bottone.id="bottonebosscereale"
+    bottone.onclick = function(){
+      apri('Boss_ScatolaDeiCereali.html')
+    }
+    document.getElementById("bottoneCattivo").appendChild(bottone);
+    
+  }
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  if (document.body.id === "cucina") {
+    creaBottoneBossCereali();
+  }
+});
