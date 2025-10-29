@@ -267,6 +267,14 @@
    background: transparent;
  }
 
+ .bottone{
+   padding: 12px 20px;
+   position: fixed;
+   transform: translateX(-50%);
+   text-align: center;
+   font-size: 4rem;
+   background: transparent;
+  }
  /* questa classe, .background, si riferisce a ogni singola immagine di sfondo
  e setta le proprietà di uno sfondo a ognuna di esse, dicesi che occupano tutto lo schermo,
  sono fisse, stanno dietro a tutti gli altri elementi*/
@@ -280,7 +288,59 @@
    /* serve a far adattare l'immagine allo schermo */
    z-index: -1;
    /* fa andare lìimmagine dietro tutti gli altri elementi */
- }
+  }
+
+.textboxBasso{
+  resize: none;
+  pointer-events: none;
+  user-select: none;
+
+  width: 70%;
+  height: 20%;
+  position: fixed;
+  left: 50%;
+  bottom: 1%;
+  transform: translateX(-50%);
+  bottom: 0;
+
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  font-size: 2rem;
+  text-align: center;
+  line-height: 1.5;
+  padding: 1%;
+  border-top: 2px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.6);
+
+  z-index: 998;
+}
+.textboxAlto{
+  resize: none;
+  pointer-events: none;
+  user-select: none;
+
+  width: 40%;
+  height: 20%;
+  position: fixed;
+  right: 10%;
+  top: 1%;
+  transform: translateX(10%);
+  bottom: 0;
+
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  font-size: 2rem;
+  text-align: center;
+  line-height: 1.5;
+  padding: 1%;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  border-top: 2px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.6);
+
+  z-index: 998;
+}
 
  /* overlay è l'oggetto che fa da transizione (fade to black) e sta davanti a tutto
  è di sfondo nero, e ha 2 stati, in uno è visibile e sparisce lentamente,
