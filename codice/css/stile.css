@@ -64,217 +64,6 @@
    display: flex;
  }
 
- /* setto posizione assoluta sui bottoni cosi rimangono sempre fissi in un punto*/
-
- #inizio {
-   padding: 12px 20px;
-   position: fixed;
-   bottom: 55%;
-   left: 50%;
-   transform: translateX(-50%);
-   text-align: center;
-   font-size: 125%;
-   background: transparent;
- }
-
- #crediti {
-   padding: 12px 20px;
-   position: fixed;
-   bottom: 40%;
-   left: 50%;
-   transform: translateX(-50%);
-   text-align: center;
-   font-size: 125%;
-   background: transparent;
- }
-
- #schizzofrenia {
-   padding: 12px 20px;
-   position: fixed;
-   bottom: 25%;
-   left: 50%;
-   transform: translateX(-50%);
-   text-align: center;
-   font-size: 125%;
-   background: transparent;
- }
-
- /* QUANDO STAI SDRAIATO SUL LETTO */
- #bottonecamera {
-   padding: 12px 20px;
-   height: 100px;
-   width: 200px;
-   position: fixed;
-   top: 20%;
-   left: 10%;
-   transform: translateX(-50%);
-   text-align: center;
-   font-size: 125%;
-   background: transparent;
- }
-
- #getup {
-   padding: 12px 20px;
-   position: fixed;
-   left: 50%;
-   top: 10%;
-   font-size: 250%;
-   background: transparent;
- }
-
-
- /* MECCANICA BASE DI SASSO CARTA FORBICE */
- .sasso {
-   padding: 12px 20px;
-   position: fixed;
-   bottom: 40%;
-   left: 43%;
-   transform: translateX(-50%);
-   text-align: center;
-   font-size: 150%;
-   background: transparent;
- }
-
- .carta {
-   padding: 12px 20px;
-   position: fixed;
-   bottom: 40%;
-   left: 50%;
-   transform: translateX(-50%);
-   text-align: center;
-   font-size: 150%;
-   background: transparent;
- }
-
- .forbice {
-   padding: 12px 20px;
-   position: fixed;
-   bottom: 40%;
-   left: 57%;
-   transform: translateX(-50%);
-   text-align: center;
-   font-size: 150%;
-   background: transparent;
- }
-
-
- /* QUA PER QUANDO SIAMO NEL CORRIDOIO */
- #bottoneCucina {
-   padding: 12px 20px;
-   position: fixed;
-   bottom: 60%;
-   left: 10%;
-   transform: translateX(-50%);
-   text-align: center;
-   font-size: 150%;
-   background: transparent;
- }
-
- #bottoneBagno {
-   padding: 12px 20px;
-   position: fixed;
-   bottom: 50%;
-   left: 50%;
-   transform: translateX(-50%);
-   text-align: center;
-   font-size: 150%;
-   background: transparent;
- }
-
- #bottoneGarage {
-   padding: 12px 20px;
-   position: fixed;
-   bottom: 50%;
-   left: 50%;
-   transform: translateX(-50%);
-   text-align: center;
-   font-size: 150%;
-   background: transparent;
- }
-
- /* QUANDO SEI AFFACCIATO SULLA FINESTRA */
-
- #salta {
-   position: fixed;
-   bottom: 50%;
-   left: 50%;
-   transform: translateX(-50%);
-   text-align: center;
-   font-size: 250%;
-   background: transparent;
- }
-
- #porta {
-   padding: 12px 20px;
-   position: fixed;
-   top: 40%;
-   left: 10%;
-   transform: translateX(-50%);
-   text-align: center;
-   font-size: 25px;
-   background: transparent;
- }
-
- /* QUESTO E' UN BOTTONE INVISIBLE, E' NELLA CAMERA E TI PORTA 
-                      ALLA FINESTRA PRIMA DI COMBATTERE CONTRO LA PORTA */
-
- #snake {
-   position: fixed;
-   top: 1%;
-   right: 0%;
-   height: 70%;
-   width: 10%;
-   transform: translateX(-50%);
-   text-align: center;
-   font-size: 25px;
-   background: transparent;
-   border: none;
-   cursor: pointer;
- }
-
- #medicine{
-   padding: 12px 20px;
-   position: fixed;
-   top: 40%;
-   right: 10%;
-   transform: translateX(-50%);
-   text-align: center;
-   font-size: 25px;
-   background: transparent;
- }
-
- #indietroBagno{
-   padding: 12px 20px;
-   position: fixed;
-   bottom: 10%;
-   right: 50%;
-   transform: translateX(-50%);
-   text-align: center;
-   font-size: 25px;
-   background: transparent;
- }
-
-
- /*  QUESTO BOTTONE FA INIZIARE LA BOSSFIGHT CONTRO I CEREALI */
- #bottonebosscereale {
-   padding: 12px 20px;
-   position: fixed;
-   bottom: 60%;
-   left: 50%;
-   transform: translateX(-50%);
-   text-align: center;
-   font-size: 4rem;
-   background: transparent;
- }
-
- .bottone{
-   padding: 12px 20px;
-   position: fixed;
-   transform: translateX(-50%);
-   text-align: center;
-   font-size: 4rem;
-   background: transparent;
-  }
  /* questa classe, .background, si riferisce a ogni singola immagine di sfondo
  e setta le proprietà di uno sfondo a ognuna di esse, dicesi che occupano tutto lo schermo,
  sono fisse, stanno dietro a tutti gli altri elementi*/
@@ -360,4 +149,160 @@
 
  #overlay.visible {
    opacity: 0;
+ }
+
+
+
+ /*BOTTONI*/
+
+ .bottone{
+  padding: 12px 20px;
+  position: fixed;
+  transform: translateX(-50%);
+  text-align: center;
+  background: transparent;
+
+ }
+
+  /* setto posizione assoluta sui bottoni cosi rimangono sempre fissi in un punto*/
+
+ #menuInizio {
+   bottom: 55%;
+   left: 50%;
+   font-size: 125%;
+ }
+
+ #menuCrediti {
+   bottom: 40%;
+   left: 50%;
+   font-size: 125%;
+ }
+
+ #menuSchizzofrenia {
+   bottom: 25%;
+   left: 50%;
+   font-size: 125%;
+ }
+
+ /* QUANDO STAI SDRAIATO SUL LETTO */
+ #alzati {
+   height: 100px;
+   width: 200px;
+   top: 20%;
+   left: 10%;
+   font-size: 125%;
+ }
+
+ /* MECCANICA BASE DI SASSO CARTA FORBICE */
+ #sasso {
+   bottom: 40%;
+   left: 43%;
+   font-size: 150%;
+ }
+
+ #carta {
+   bottom: 40%;
+   left: 50%;
+   font-size: 150%;
+ }
+
+ #forbice {
+   bottom: 40%;
+   left: 57%;
+   font-size: 150%;
+ }
+
+
+ /* QUA PER QUANDO SIAMO NEL CORRIDOIO */
+ #cucina {
+   padding: 12px 20px;
+   position: fixed;
+   bottom: 60%;
+   left: 10%;
+   transform: translateX(-50%);
+   text-align: center;
+   font-size: 150%;
+   background: transparent;
+ }
+
+ #bagno {
+   padding: 12px 20px;
+   position: fixed;
+   bottom: 50%;
+   left: 50%;
+   transform: translateX(-50%);
+   text-align: center;
+   font-size: 150%;
+   background: transparent;
+ }
+
+ #garage {
+   padding: 12px 20px;
+   position: fixed;
+   bottom: 50%;
+   left: 50%;
+   transform: translateX(-50%);
+   text-align: center;
+   font-size: 150%;
+   background: transparent;
+ }
+
+ /* QUANDO SEI AFFACCIATO SULLA FINESTRA */
+
+ #salta {
+   position: fixed;
+   bottom: 50%;
+   left: 50%;
+   transform: translateX(-50%);
+   text-align: center;
+   font-size: 250%;
+   background: transparent;
+ }
+
+ #portaCamera {
+   padding: 12px 20px;
+   position: fixed;
+   top: 40%;
+   left: 10%;
+   transform: translateX(-50%);
+   text-align: center;
+   font-size: 25px;
+   background: transparent;
+ }
+
+ /* QUESTO E' UN BOTTONE INVISIBLE, E' NELLA CAMERA E TI PORTA 
+  ALLA FINESTRA PRIMA DI COMBATTERE CONTRO LA PORTA */
+
+ #finestra{
+
+ }
+
+ #finestra.nascosto {
+   top: 1%;
+   right: 0%;
+   height: 70%;
+   width: 10%;
+   font-size: 25px;
+   border: none;
+   cursor: pointer;
+ }
+
+ #medicine{
+   top: 40%;
+   right: 10%;
+   font-size: 25px;
+ }
+
+ #indietroBagno{
+   bottom: 10%;
+   right: 50%;
+   font-size: 25px;
+ }
+
+
+ /*  QUESTO BOTTONE FA INIZIARE LA BOSSFIGHT CONTRO I CEREALI */
+ #bottoneBossCereali {
+   bottom: 60%;
+   left: 50%;
+   font-size: 4rem;
  }
