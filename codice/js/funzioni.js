@@ -1,11 +1,21 @@
 /*******************VARIABILI********************/
 
-let preseMedicine =false;
-
+let puntiComputer = 0;
+let puntiGiocatore = 0;
 
 /********************FUNZIONI********************/
 
-function saCaFo(input) {
+function inizia () {
+  sessionStorage.setItem('preseMedicine', false);
+  sessionStorage.setItem('vintoBossPorta', false);
+  sessionStorage.setItem('giocatoControPorta', false);
+  sessionStorage.setItem('preseMedicine', false);
+  apri('sdraiato.html');
+}
+
+//
+
+function saCaFo(input, urlSeVince, urlSePerde) {
   let computer = Math.floor(Math.random() * 3)
   console.log(computer);
 
@@ -17,7 +27,17 @@ function saCaFo(input) {
 
   if (computer == 2 && input == 0 || computer == 2 && input == 1 || computer == 1 && input == 2)
     alert('giocatore');
+
+  if (puntiComputer > 2)
+    apri(urlSePerde);
+
+  if (puntiGiocatore > 2)
+    apri(urlSeVince);
+
+  //vhe pallleeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
 }
+
+//
 
 function apri(pagina){
   let overlay = document.getElementById('overlay');
@@ -27,9 +47,14 @@ function apri(pagina){
   }, 500);
 }
 
+//
+
 function prendiMedicine(){
-  presemedicine=true;
+  sessionStorage.removeItem('preseMedicine');
+  sessionStorage.setItem('preseMedicine', true);
 }
+
+//
 
 function creaBottoneBossCereali(){
   if(!preseMedicine){
@@ -55,6 +80,8 @@ addEventListener('load', () => {
   overlay.classList.add('visible');
 })
 
+//
+
 document.addEventListener("DOMContentLoaded", () => {
   switch (document.body.id) 
   {
@@ -62,5 +89,5 @@ document.addEventListener("DOMContentLoaded", () => {
       creaBottoneBossCereali();
       break;
   }
-  
+
 });
