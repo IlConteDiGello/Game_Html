@@ -160,8 +160,12 @@
   position: fixed;
   transform: translateX(-50%);
   text-align: center;
-  background: transparent;
+  background: rgba(212, 212, 212, 0.3);
+  transition: background 0.25s;
+ }
 
+  .bottone:hover{
+    background: rgba(212, 212, 212, 0.8);
  }
 
   /* setto posizione assoluta sui bottoni cosi rimangono sempre fissi in un punto*/

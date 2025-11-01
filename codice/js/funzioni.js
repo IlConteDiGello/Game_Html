@@ -37,7 +37,7 @@ function creaBottoneBossCereali(){
     let bottone = document.createElement("input");
 
     bottone.type = "button";
-    bottone.value = "Combatti contro la scatola di cereali";
+    bottone.value = "Fai colazione";
     bottone.id = "bossCereali";
     bottone.classList.add("bottone"); 
     bottone.onclick = function(){
