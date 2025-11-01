@@ -34,10 +34,12 @@ function prendiMedicine(){
 
 function creaBottoneBossCereali(){
   if(!presemedicine){
-    let bottone = document.createElement("button");
+    let bottone = document.createElement("input");
 
-    bottone.textContent = "Combatti contro la scatola di cereali";
-    bottone.id="bottonebosscereale"
+    bottone.type = "button";
+    bottone.value = "Combatti contro la scatola di cereali";
+    bottone.id = "bossCereali";
+    bottone.classList.add("bottone"); 
     bottone.onclick = function(){
       apri('Boss_ScatolaDeiCereali.html')
     }
