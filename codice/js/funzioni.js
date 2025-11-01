@@ -1,3 +1,10 @@
+/*******************VARIABILI********************/
+
+let preseMedicine =false;
+
+
+/********************FUNZIONI********************/
+
 function saCaFo(input) {
   let computer = Math.floor(Math.random() * 3)
   console.log(computer);
@@ -20,20 +27,12 @@ function apri(pagina){
   }, 500);
 }
 
-
-addEventListener('load', () => {
-  let overlay = document.getElementById('overlay');
-  overlay.classList.add('visible');
-})
-
-let presemedicine =false;
-
 function prendiMedicine(){
   presemedicine=true;
 }
 
 function creaBottoneBossCereali(){
-  if(!presemedicine){
+  if(!preseMedicine){
     let bottone = document.createElement("input");
 
     bottone.type = "button";
@@ -48,8 +47,19 @@ function creaBottoneBossCereali(){
   }
 }
 
+
+/*****************EVENT LISTENERS***************/
+
+addEventListener('load', () => {
+  let overlay = document.getElementById('overlay');
+  overlay.classList.add('visible');
+})
+
 document.addEventListener("DOMContentLoaded", () => {
-  if (document.body.id === "cucina") {
-    creaBottoneBossCereali();
+  switch (document.body.id) 
+  {
+    case "cucina":
+      creaBottoneBossCereali();
+      break;
   }
 });

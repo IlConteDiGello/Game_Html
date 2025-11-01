@@ -1,0 +1,41 @@
+/*Foglio di stile con preload dei font*/
+
+ /* MENU */
+
+ /* da qui, tutti i righi che iniziano com @font-face servono a caricare i font salvati dentro al sistema,
+        le righe di prima sono il PRELOAD, cioè servono ad evitare ritardi, queste servono a trovare i font veri e propri*/
+ @font-face {
+   /*@font-face serve a specificare un font custom da caricare*/
+   font-family: 'Andy';
+   src: url('../fonts/ANDYB.TTF') format('truetype');
+ }
+
+ @font-face {
+   font-family: 'teacher';
+   src: url('../../fonts/Teacher_Sez_by_smartalecvt.ttf') format('truetype');
+ }
+
+ @font-face {
+   font-family: 'japab';
+   src: url('../../fonts/JAPAB___.TTF') format('truetype');
+ }
+
+ @font-face {
+   font-family: 'wingdings';
+   src: url('../../fonts/wingding.ttf') format('truetype');
+ }
+
+ @font-face {
+   font-family: 'Ringmaster';
+   src: url('../../fonts/JFRingmaster.ttf') format('truetype');
+ }
+
+ @font-face {
+   font-family: 'wasted';
+   src: url('../../fonts/Mostwasted.ttf') format('truetype');
+ }
+
+ @font-face {
+   font-family: 'zealot';
+   src: url('../../fonts/zealot.ttf') format('truetype');
+ }
