@@ -2,6 +2,8 @@
 
 let puntiComputer = 0;
 let puntiGiocatore = 0;
+let viteDio = 3;
+let viteGiocatore = 3;
 
 /********************FUNZIONI********************/
 
@@ -16,28 +18,57 @@ function inizia () {
 //sessionStorage.setItem serve a memorizzre un dato fino a che nno viene chiusa la finestra di browser, quindi un dato rimane memorizzato per tutta la sessione di gioco
 //ci serve per memorizzare cose come se sono state prese le medicine, se è stata vinta una battaglia
 
-function saCaFo(input, urlSeVince, urlSePerde) {
+
+
+function disegnaVite(ViteId, numeroVite) {
+  //ViteId sarebbe che tipo di vite sono, quindi se si parla di vite del giocatore o del Boss
+  const contenitore = document.getElementById(ViteId); 
+  contenitore.innerHTML = ""; // questo serve a svuotare il contenitore cosi si posso ridisegnare
+  for (let i = 0; i < numeroVite; i++) {  // da 0 a quante vite si hanno
+    const cuoricino = document.createElement("img");
+    cuoricino.src = "../immagini/cuoricino.png";
+    cuoricino.classList.add("vite")
+    if(ViteId==="viteGiocatore"){
+      cuoricino.classList.add("viteGiocatore");
+    }
+    else{
+      cuoricino.classList.add("viteDio");
+    }
+    
+    contenitore.appendChild(cuoricino);
+  }
+}
+
+window.onload = function() {
+  const pagina = window.location.pathname; // es: "/gioco/boss.html"
+
+  if (pagina.includes("Dio.html")) {
+    disegnaVite("viteGiocatore", viteGiocatore);
+    disegnaVite("viteDio", viteDio);
+  }
+}
+
+function saCaFoDio(input, urlSeVince, urlSePerde) {
   let computer = Math.floor(Math.random() * 3)
   console.log(computer);
 
-  if (computer == input)
+  if (computer == input){
     alert('pari');
-
-  if (computer == 1 && input == 0 || computer == 0 && input == 1 || computer == 0 && input == 2)
-    alert('computer');
-
-  if (computer == 2 && input == 0 || computer == 2 && input == 1 || computer == 1 && input == 2)
-    alert('giocatore');
-
-  if (puntiComputer > 2){
-    //spawnare il bottone per proseguire o per tornare indietro
   }
-
-  if (puntiGiocatore > 2){
-    //creare bottone per andare avanti
+  if (computer == 1 && input == 0 || computer == 0 && input == 1 || computer == 0 && input == 2){
+    alert('computer');
+    viteGiocatore--;
+    disegnaVite("viteGiocatore", viteGiocatore);
+  }
+  if (computer == 2 && input == 0 || computer == 2 && input == 1 || computer == 1 && input == 2){
+    alert('giocatore');
+    viteDio--;
+    disegnaVite("viteDio", viteDio);
   }
 
 }
+
+
 
 //funzione per creare bottone che ti fa andare avanti dopo che hai vinto contro la fucking porta
 

@@ -1,3 +1,22 @@
 .vite{
-    
+    width: 8%;
+    height: 15%;
 }
+
+#viteGiocatore{
+    flex-direction: row-reverse;
+    position: fixed;
+    bottom: 7%;
+    right: 3%;
+    display: flex;
+    gap: 1%;
+}
+
+#viteDio{
+    position: fixed;
+    top: 7%;
+    left: 3%;
+    display: flex;
+    gap: 1%;
+}
+
