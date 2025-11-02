@@ -1,8 +1,6 @@
 /*******************VARIABILI********************/
 
-let puntiComputer = 0;
-let puntiGiocatore = 0;
-let viteDio = 3;
+let viteComputer = 3;
 let viteGiocatore = 3;
 
 /********************FUNZIONI********************/
@@ -15,10 +13,10 @@ function inizia () {
   apri('sdraiato.html');
 }
 
-//sessionStorage.setItem serve a memorizzre un dato fino a che nno viene chiusa la finestra di browser, quindi un dato rimane memorizzato per tutta la sessione di gioco
+//sessionStorage.setItem serve a memorizzre un dato fino a che non viene chiusa la finestra di browser, quindi un dato rimane memorizzato per tutta la sessione di gioco
 //ci serve per memorizzare cose come se sono state prese le medicine, se è stata vinta una battaglia
 
-
+//BOILERPLATE!!!!!!
 
 function disegnaVite(ViteId, numeroVite) {
   //ViteId sarebbe che tipo di vite sono, quindi se si parla di vite del giocatore o del Boss
@@ -32,7 +30,7 @@ function disegnaVite(ViteId, numeroVite) {
       cuoricino.classList.add("viteGiocatore");
     }
     else{
-      cuoricino.classList.add("viteDio");
+      cuoricino.classList.add("viteComputer");
     }
     
     contenitore.appendChild(cuoricino);
@@ -42,13 +40,13 @@ function disegnaVite(ViteId, numeroVite) {
 window.onload = function() {
   const pagina = window.location.pathname; // es: "/gioco/boss.html"
 
-  if (pagina.includes("Dio.html")) {
+  if (pagina.includes("Boss")) {
     disegnaVite("viteGiocatore", viteGiocatore);
-    disegnaVite("viteDio", viteDio);
+    disegnaVite("viteComputer", viteComputer);
   }
 }
 
-function saCaFoDio(input, urlSeVince, urlSePerde) {
+function saCaFo(input, urlSeVince, urlSePerde) {
   let computer = Math.floor(Math.random() * 3)
   console.log(computer);
 
@@ -58,12 +56,16 @@ function saCaFoDio(input, urlSeVince, urlSePerde) {
   if (computer == 1 && input == 0 || computer == 0 && input == 1 || computer == 0 && input == 2){
     alert('computer');
     viteGiocatore--;
+    if (viteGiocatore === 0)
+      apri(urlSePerde);
     disegnaVite("viteGiocatore", viteGiocatore);
   }
   if (computer == 2 && input == 0 || computer == 2 && input == 1 || computer == 1 && input == 2){
     alert('giocatore');
-    viteDio--;
-    disegnaVite("viteDio", viteDio);
+    viteComputer--;
+    if (viteComputer === 0)
+      apri(urlSeVince);
+    disegnaVite("viteComputer", viteComputer);
   }
 
 }
@@ -72,7 +74,7 @@ function saCaFoDio(input, urlSeVince, urlSePerde) {
 
 //funzione per creare bottone che ti fa andare avanti dopo che hai vinto contro la fucking porta
 
-function CreaBottoneCorridoio(){
+function creaBottoneCorridoio(){
   let bottone = document.createElement("input");
 
   bottone.type="button";
@@ -135,6 +137,17 @@ document.addEventListener("DOMContentLoaded", () => {
     case "cucina":
       creaBottoneBossCereali();
       break;
+    case "porta":
+      if (!localStorage.getItem("giocatoControPorta")) {
+        disegnaVite("viteGiocatore", viteGiocatore);
+        disegnaVite("viteComputer", viteComputer);
+      }
+      break;
+    case "dio":
+      disegnaVite("viteGiocatore", viteGiocatore);
+      disegnaVite("viteComputer", viteComputer);
+      break;
+
   }
 
 });
