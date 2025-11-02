@@ -33,6 +33,10 @@ ROBBA DA FARE:
 
 --  
 
+possibile finale:
+andato nel bosco, un piccolo scontro finale, poi il protagonista sviene, schermo va a nero (magari una scritta) e poi 
+ricomincia il gioco (o termina e basta)
+
 
 
 
