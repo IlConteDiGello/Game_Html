@@ -110,6 +110,12 @@
    opacity: 0;
  }
 
-
+#pillole{
+  position: fixed;
+  width: 5%;
+  height: 15%;
+  bottom: 28%;
+  right: 49%;
+}
 
  

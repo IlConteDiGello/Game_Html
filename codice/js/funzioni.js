@@ -151,3 +151,13 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
 });
+
+//      AUDIO
+
+function Passi(){
+  const audio = new Audio("../audio/passi_legno.mp3");
+  audio.currentTime = 0;
+  audio.volume = 0.5;
+  audio.play();
+}
+
