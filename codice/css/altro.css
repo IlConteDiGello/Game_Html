@@ -21,3 +21,10 @@
     gap: 1%;
 }
 
+#bottoneVittoriaPorta {
+    position: fixed;
+    bottom: 25%;
+    left: 50%;
+    font-size: 150%;
+
+}

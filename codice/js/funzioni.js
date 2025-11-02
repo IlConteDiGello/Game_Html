@@ -37,14 +37,14 @@ function disegnaVite(ViteId, numeroVite) {
   }
 }
 
-window.onload = function() {
+/*window.onload = function() {
   const pagina = window.location.pathname; // es: "/gioco/boss.html"
 
   if (pagina.includes("Boss")) {
     disegnaVite("viteGiocatore", viteGiocatore);
     disegnaVite("viteComputer", viteComputer);
   }
-}
+}*/
 
 function saCaFo(input, urlSeVince, urlSePerde) {
   let computer = Math.floor(Math.random() * 3)
@@ -127,22 +127,49 @@ function creaBottoneBossCereali(){
 addEventListener('load', () => {
   let overlay = document.getElementById('overlay');
   overlay.classList.add('visible');
+  switch (document.body.id) 
+  {
+    case "cucina":
+      creaBottoneBossCereali();
+      break;
+
+    case "porta":
+      if (!sessionStorage.getItem("giocatoControPorta")) {
+        disegnaVite("viteGiocatore", viteGiocatore);
+        disegnaVite("viteComputer", viteComputer);
+        sessionStorage.setItem("giocatoControPorta", true);
+      }
+      else
+        creaBottoneCorridoio();
+      break;
+
+    case "dio":
+      disegnaVite("viteGiocatore", viteGiocatore);
+      disegnaVite("viteComputer", viteComputer);
+      break;
+
+  }
 })
 
 //
-
+/*
 document.addEventListener("DOMContentLoaded", () => {
   switch (document.body.id) 
   {
     case "cucina":
       creaBottoneBossCereali();
       break;
+
     case "porta":
       if (!localStorage.getItem("giocatoControPorta")) {
         disegnaVite("viteGiocatore", viteGiocatore);
         disegnaVite("viteComputer", viteComputer);
+        localStorage.setItem("giocatoControPorta", true);
       }
+      else
+        creaBottoneCorridoio();
       break;
+
     case "dio":
       disegnaVite("viteGiocatore", viteGiocatore);
       disegnaVite("viteComputer", viteComputer);
@@ -151,3 +178,4 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
 });
+*/
