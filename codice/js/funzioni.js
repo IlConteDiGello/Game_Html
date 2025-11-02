@@ -13,7 +13,8 @@ function inizia () {
   apri('sdraiato.html');
 }
 
-//
+//sessionStorage.setItem serve a memorizzre un dato fino a che nno viene chiusa la finestra di browser, quindi un dato rimane memorizzato per tutta la sessione di gioco
+//ci serve per memorizzare cose come se sono state prese le medicine, se è stata vinta una battaglia
 
 function saCaFo(input, urlSeVince, urlSePerde) {
   let computer = Math.floor(Math.random() * 3)
@@ -28,16 +29,30 @@ function saCaFo(input, urlSeVince, urlSePerde) {
   if (computer == 2 && input == 0 || computer == 2 && input == 1 || computer == 1 && input == 2)
     alert('giocatore');
 
-  if (puntiComputer > 2)
-    apri(urlSePerde);
+  if (puntiComputer > 2){
+    //spawnare il bottone per proseguire o per tornare indietro
+  }
 
-  if (puntiGiocatore > 2)
-    apri(urlSeVince);
+  if (puntiGiocatore > 2){
+    //creare bottone per andare avanti
+  }
 
-  //vhe pallleeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
 }
 
-//
+//funzione per creare bottone che ti fa andare avanti dopo che hai vinto contro la fucking porta
+
+function CreaBottoneCorridoio(){
+  let bottone = document.createElement("input");
+
+  bottone.type="button";
+  bottone.value="avanza nel corridoio";
+  bottone.id="corridoio";
+  bottone.classList.add("bottone");
+  bottone.onclick = function(){
+    apri('Corridoio.html');
+  }
+  document.getElementById("bottoneVittoriaPorta").appendChild(bottone);
+}
 
 function apri(pagina){
   let overlay = document.getElementById('overlay');
@@ -71,6 +86,7 @@ function creaBottoneBossCereali(){
     
   }
 }
+
 
 
 /*****************EVENT LISTENERS***************/

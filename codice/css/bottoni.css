@@ -44,19 +44,19 @@
 
  /* MECCANICA BASE DI SASSO CARTA FORBICE */
  #sasso {
-   bottom: 40%;
+   bottom: 25%;
    left: 43%;
    font-size: 150%;
  }
 
  #carta {
-   bottom: 40%;
+   bottom: 25%;
    left: 50%;
    font-size: 150%;
  }
 
  #forbice {
-   bottom: 40%;
+   bottom: 25%;
    left: 57%;
    font-size: 150%;
  }
