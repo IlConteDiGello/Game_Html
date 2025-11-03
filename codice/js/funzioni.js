@@ -4,6 +4,7 @@ let viteComputer = 3;
 let viteGiocatore = 3;
 let preseMedicine = sessionStorage.getItem('preseMedicine') === 'false';
 
+
 /********************FUNZIONI********************/
 
 function inizia () {
@@ -52,17 +53,17 @@ function saCaFo(input, urlSeVince, urlSePerde) {
   console.log(computer);
 
   if (computer == input){
-    alert('pari');
+    alert('è un pareggio!');
   }
   if (computer == 1 && input == 0 || computer == 0 && input == 1 || computer == 0 && input == 2){
-    alert('computer');
+    alert('Hai perso il turno!');
     viteGiocatore--;
     if (viteGiocatore === 0)
       apri(urlSePerde);
     disegnaVite("viteGiocatore", viteGiocatore);
   }
   if (computer == 2 && input == 0 || computer == 2 && input == 1 || computer == 1 && input == 2){
-    alert('giocatore');
+    alert('Hai vinto il turno!');
     viteComputer--;
     if (viteComputer === 0)
       apri(urlSeVince);
@@ -72,21 +73,8 @@ function saCaFo(input, urlSeVince, urlSePerde) {
 }
 
 
-
 //funzione per creare bottone che ti fa andare avanti dopo che hai vinto contro la fucking porta
 
-function creaBottoneCorridoio(){
-  let bottone = document.createElement("input");
-
-  bottone.type="button";
-  bottone.value="avanza nel corridoio";
-  bottone.id="corridoio";
-  bottone.classList.add("bottone");
-  bottone.onclick = function(){
-    apri('Corridoio.html');
-  }
-  document.getElementById("bottoneVittoriaPorta").appendChild(bottone);
-}
 
 function apri(pagina){
   let overlay = document.getElementById('overlay');
@@ -113,7 +101,7 @@ function creaBottoneBossCereali(){
     let bottone = document.createElement("input");
 
     bottone.type = "button";
-    bottone.value = "Fai colazione";
+    bottone.value = "Fai colazione?";
     bottone.id = "bossCereali";
     bottone.classList.add("bottone"); 
     bottone.onclick = function(){
@@ -122,6 +110,25 @@ function creaBottoneBossCereali(){
     document.getElementById("bottoneCattivo").appendChild(bottone);
     
   }
+  else{
+    let bottone = document.createElement("input");
+
+    bottone.type = "button";
+    bottone.value = "Fai colazione";
+    bottone.id = "colazione";
+    bottone.classList.add("bottone"); 
+    bottone.onclick = function(){
+      apri('colazione.html')
+    }
+    document.getElementById("bottoneCattivo").appendChild(bottone);
+  }
+}
+
+function controlloPortaBattuta(){
+  let bottoneFinestra = document.getElementById("finestra");
+  if(giocatoControPorta){
+  bottoneFinestra.classList.add("visibile");
+  bottoneFinestra.value="Buttati dalla finestra";}
 }
 
 
@@ -155,6 +162,13 @@ addEventListener('load', () => {
   }
 })
 
+
+function cambiaSfondoColazione(){
+  const bottonecolazione = document.getElementById("bottoneColazione");
+  const sfondo = document.getElementById("sfondoColazione");
+
+  sfondo.src = "../immagini/colazioneFatta.png";
+}
 //
 /*
 document.addEventListener("DOMContentLoaded", () => {
@@ -194,3 +208,5 @@ function Passi(){
   audio.volume = 0.5;
   audio.play();
 }
+
+
