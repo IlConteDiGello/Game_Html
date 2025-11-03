@@ -99,7 +99,7 @@ function creaBottoneBossCereali(){
 
   let preseMedicine = sessionStorage.getItem('preseMedicine') === 'false';
 
-  if(preseMedicine){
+  if(!preseMedicine){
     let bottone = document.createElement("input");
 
     bottone.type = "button";

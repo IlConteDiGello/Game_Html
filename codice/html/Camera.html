@@ -45,7 +45,7 @@
     //se si ha giocato contro la porta e si ha perso rende visibile il bottone finestra
     if(sessionStorage.getItem('giocatoControPorta') === 'true' && sessionStorage.getItem('vintoBossPorta') === 'false'){
       let finestra = document.getElementById('finestra');
-      finestra.classList.add('visible');
+      finestra.classList.add('visibile');
       let textbox = document.getElementById('textbox');
       textbox.innerHTML = 'Non posso uscire dalla porta.';
     }
