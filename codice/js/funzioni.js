@@ -104,8 +104,10 @@ addEventListener('load', () => {
 function cambiaSfondoColazione(){
   const bottonecolazione = document.getElementById("bottoneColazione");
   const sfondo = document.getElementById("sfondoColazione");
+  let textbox = document.getElementById("textboxcolazione");
 
   sfondo.src = "../immagini/colazioneFatta.png";
+  textbox.value = "Oh No! Sono diventato una scatola di cereali! Aiuto!!!";
 }
 //
 
