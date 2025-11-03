@@ -12,13 +12,32 @@
   
   <div id="bottoneCattivo"></div>
   <div> <img class="background" src="../immagini/cucina.png"></div>
-  <textarea class="textboxBasso"></textarea>
+  <textarea id="textbox"></textarea>
   <button class="bottone" id="indietro" onclick="apri('soggiorno.html')">Torna indietro</button>
   
   <script>
-    window.onload = function(){
-      creaBottoneBossCereali();
+
+    if (sessionStorage.getItem('preseMedicine') === 'true'){
+      let bottone = document.createElement("input");
+
+      bottone.type = "button";
+      bottone.value = "Fai colazione";
+      bottone.id = "colazione";
+      bottone.classList.add("bottone"); 
+      bottone.onclick = () => apri('colazione.html')
+      document.getElementById("bottoneCattivo").appendChild(bottone);
     }
+    else{
+      let bottone = document.createElement("input");
+
+      bottone.type = "button";
+      bottone.value = "Fai colazione?";
+      bottone.id = "bossCereali";
+      bottone.classList.add("bottone"); 
+      bottone.onclick = () => apri('Boss_ScatolaDeiCereali.html')
+      document.getElementById("bottoneCattivo").appendChild(bottone);
+    }
+
   </script>
 </body>
 

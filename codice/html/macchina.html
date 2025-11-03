@@ -13,14 +13,31 @@
 <body>
 
   <div id="overlay"></div>
-  <div id="bottonePerGuidareNelBoscoConUnNomeMoltoLungoNeancheIoSoPerchè"></div>
   <div> <img class="background" src="../immagini/dentroLaMacchina.png"></div>
-  <button class="bottone" id="guidaNelBosco" onclick="apri('nero.html')">Vai al lavoro</button>
+  <div id="bottonePerGuidareNelBoscoConUnNomeMoltoLungoNeancheIoSoPerchè"></div>
 
   
   <script>
-    window.onload = function(){
-      guidare();
+    if(sessionStorage.getItem('preseMedicine' === 'true')) {
+      let bottone = document.createElement("button");
+
+      bottone.innerHTML = "Vai al lavoro";
+      bottone.id = "guidaAlLavoro";
+      bottone.classList.add("bottone"); 
+      bottone.onclick = () => apri('nero.html');
+
+      document.getElementById("bottonePerGuidareNelBoscoConUnNomeMoltoLungoNeancheIoSoPerchè").appendChild(bottone);
+    }
+    
+    else {
+      let bottone = document.createElement("button");
+
+      bottone.innerHTML = "Vai nel bosco";
+      bottone.id = "guidaNelBosco";
+      bottone.classList.add("bottone"); 
+      bottone.onclick = () => apri('Bosco.html');
+
+      document.getElementById("bottonePerGuidareNelBoscoConUnNomeMoltoLungoNeancheIoSoPerchè").appendChild(bottone);
     }
   </script>
 </body>

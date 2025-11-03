@@ -93,64 +93,6 @@ function apri(pagina){
 
 
 
-//
-
-function creaBottoneBossCereali(){
-
-  let preseMedicine = sessionStorage.getItem('preseMedicine') === 'false';
-
-  if(preseMedicine){
-    let bottone = document.createElement("input");
-
-    bottone.type = "button";
-    bottone.value = "Fai colazione?";
-    bottone.id = "bossCereali";
-    bottone.classList.add("bottone"); 
-    bottone.onclick = function(){
-      apri('Boss_ScatolaDeiCereali.html')
-    }
-    document.getElementById("bottoneCattivo").appendChild(bottone);
-    
-  }
-  else{
-    let bottone = document.createElement("input");
-
-    bottone.type = "button";
-    bottone.value = "Fai colazione";
-    bottone.id = "colazione";
-    bottone.classList.add("bottone"); 
-    bottone.onclick = function(){
-      apri('colazione.html')
-    }
-    document.getElementById("bottoneCattivo").appendChild(bottone);
-  }
-}
-
-function guidare(){
-  if(!preseMedicine){
-    let bottone = document.createElement("input");
-
-    bottone.type = "button";
-    bottone.value = "Vai nel bosco";
-    bottone.id = "guidaNelBosco";
-    bottone.classList.add("bottone"); 
-    bottone.onclick = function(){
-      apri('Bosco.html')
-    }
-    document.getElementById("bottonePerGuidareNelBoscoConUnNomeMoltoLungoNeancheIoSoPerchè").appendChild(bottone);
-  }
-}
-
-/*
-function controlloPortaBattuta(){
-  let bottoneFinestra = document.getElementById("finestra");
-  if(giocatoControPorta){
-  bottoneFinestra.classList.add("visibile");
-  bottoneFinestra.value="Buttati dalla finestra";}
-}*/
-
-
-
 /*****************EVENT LISTENERS***************/
 
 addEventListener('load', () => {

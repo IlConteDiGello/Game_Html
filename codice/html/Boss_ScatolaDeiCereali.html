@@ -14,13 +14,19 @@
 
   <div> <img class="background" src="../immagini/cereali.png"></div>
   <div id="overlay"></div>
-  <input type="button" name="sasso" value="sasso" onclick="saCaFo(0, 'cucina.html', 'cucina.html')" class="bottone" id="sasso">
-  <input type="button" name="carta" value="carta" onclick="saCaFo(1, 'cucina.html', 'cucina.html')" class="bottone" id="carta">
-  <input type="button" name="forbici" value="forbici" onclick="saCaFo(2, 'cucina.html', 'cucina.html')" class="bottone" id="forbice">
+  <input type="button" name="sasso" value="sasso" onclick="saCaFo(0, 'Cucina.html', 'Cucina.html')" class="bottone" id="sasso">
+  <input type="button" name="carta" value="carta" onclick="saCaFo(1, 'Cucina.html', 'Cucina.html')" class="bottone" id="carta">
+  <input type="button" name="forbici" value="forbici" onclick="saCaFo(2, 'Cucina.html', 'Cucina.html')" class="bottone" id="forbice">
 
   <div id="viteGiocatore"></div>
 
   <div id="viteComputer"></div>
+
+  <script>
+    disegnaVite("viteGiocatore", viteGiocatore);
+    disegnaVite("viteComputer", viteComputer);
+  </script>
+
 </body>
 
 </html>
