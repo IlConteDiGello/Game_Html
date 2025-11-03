@@ -7,11 +7,18 @@
   <link rel="stylesheet" href="../css/stile.css">
 </head>
 
-<body>
+<body id="porta">
   <div id="overlay"></div>
-  <input type="button" name="sasso" value="sasso" onclick="saCaFo(0)" class="sasso">
-  <input type="button" name="carta" value="carta" onclick="saCaFo(1)" class="carta">
-  <input type="button" name="forbici" value="forbici" onclick="saCaFo(2)" class="forbice">
+  <div> <img class="background" src="../immagini/porta.png"></div>
+  <input type="button" name="sasso" value="sasso" onclick="saCaFo(0, 'Corridoio.html', 'Camera.html')" class="bottone" id="sasso">
+  <input type="button" name="carta" value="carta" onclick="saCaFo(1, 'Corridoio.html', 'Camera.html')" class="bottone" id="carta">
+  <input type="button" name="forbici" value="forbici" onclick="saCaFo(2, 'Corridoio.html', 'Camera.html')" class="bottone" id="forbice">
+
+  <div id="bottoneVittoriaPorta"></div>
+
+  <div id="viteGiocatore"></div>
+
+  <div id="viteComputer"></div>
 </body>
 
 </html>

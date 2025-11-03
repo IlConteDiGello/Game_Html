@@ -1,49 +1,8 @@
- /* QUESTO è UN FILE .CSS DOVE ABBIAMO MESSO TUTTE LE ESTETICHE E I FONT DA CARICARE PER LA SCHERMATA DI TITOLO
- ALL'INIZIO DI OGNI FILE LO STILE VIENE PRESO DA QUI TRAMITE LA LINEA DI CODICE:
-<    link rel="stylesheet" href="../css/stile.css">      */
+@import url(bottoni.css);
+@import url(font.css);
+@import url(altro.css);
 
-
-
- /* MENU */
-
- /* da qui, tutti i righi che iniziano com @font-face servono a caricare i font salvati dentro al sistema,
-        le righe di prima sono il PRELOAD, cioè servono ad evitare ritardi, queste servono a trovare i font veri e propri*/
- @font-face {
-   /*@font-face serve a specificare un font custom da caricare*/
-   font-family: 'Andy';
-   src: url('../fonts/ANDYB.TTF') format('truetype');
- }
-
- @font-face {
-   font-family: 'teacher';
-   src: url('../../fonts/Teacher_Sez_by_smartalecvt.ttf') format('truetype');
- }
-
- @font-face {
-   font-family: 'japab';
-   src: url('../../fonts/JAPAB___.TTF') format('truetype');
- }
-
- @font-face {
-   font-family: 'wingdings';
-   src: url('../../fonts/wingding.ttf') format('truetype');
- }
-
- @font-face {
-   font-family: 'Ringmaster';
-   src: url('../../fonts/JFRingmaster.ttf') format('truetype');
- }
-
- @font-face {
-   font-family: 'wasted';
-   src: url('../../fonts/Mostwasted.ttf') format('truetype');
- }
-
- @font-face {
-   font-family: 'zealot';
-   src: url('../../fonts/zealot.ttf') format('truetype');
- }
-
+/*Definizioni varie*/
 
  #gametitle {
    font-size: 5rem;
@@ -64,217 +23,6 @@
    display: flex;
  }
 
- /* setto posizione assoluta sui bottoni cosi rimangono sempre fissi in un punto*/
-
- #inizio {
-   padding: 12px 20px;
-   position: fixed;
-   bottom: 55%;
-   left: 50%;
-   transform: translateX(-50%);
-   text-align: center;
-   font-size: 125%;
-   background: transparent;
- }
-
- #crediti {
-   padding: 12px 20px;
-   position: fixed;
-   bottom: 40%;
-   left: 50%;
-   transform: translateX(-50%);
-   text-align: center;
-   font-size: 125%;
-   background: transparent;
- }
-
- #schizzofrenia {
-   padding: 12px 20px;
-   position: fixed;
-   bottom: 25%;
-   left: 50%;
-   transform: translateX(-50%);
-   text-align: center;
-   font-size: 125%;
-   background: transparent;
- }
-
- /* QUANDO STAI SDRAIATO SUL LETTO */
- #bottonecamera {
-   padding: 12px 20px;
-   height: 100px;
-   width: 200px;
-   position: fixed;
-   top: 20%;
-   left: 10%;
-   transform: translateX(-50%);
-   text-align: center;
-   font-size: 125%;
-   background: transparent;
- }
-
- #getup {
-   padding: 12px 20px;
-   position: fixed;
-   left: 50%;
-   top: 10%;
-   font-size: 250%;
-   background: transparent;
- }
-
-
- /* MECCANICA BASE DI SASSO CARTA FORBICE */
- .sasso {
-   padding: 12px 20px;
-   position: fixed;
-   bottom: 40%;
-   left: 43%;
-   transform: translateX(-50%);
-   text-align: center;
-   font-size: 150%;
-   background: transparent;
- }
-
- .carta {
-   padding: 12px 20px;
-   position: fixed;
-   bottom: 40%;
-   left: 50%;
-   transform: translateX(-50%);
-   text-align: center;
-   font-size: 150%;
-   background: transparent;
- }
-
- .forbice {
-   padding: 12px 20px;
-   position: fixed;
-   bottom: 40%;
-   left: 57%;
-   transform: translateX(-50%);
-   text-align: center;
-   font-size: 150%;
-   background: transparent;
- }
-
-
- /* QUA PER QUANDO SIAMO NEL CORRIDOIO */
- #bottoneCucina {
-   padding: 12px 20px;
-   position: fixed;
-   bottom: 60%;
-   left: 10%;
-   transform: translateX(-50%);
-   text-align: center;
-   font-size: 150%;
-   background: transparent;
- }
-
- #bottoneBagno {
-   padding: 12px 20px;
-   position: fixed;
-   bottom: 50%;
-   left: 50%;
-   transform: translateX(-50%);
-   text-align: center;
-   font-size: 150%;
-   background: transparent;
- }
-
- #bottoneGarage {
-   padding: 12px 20px;
-   position: fixed;
-   bottom: 50%;
-   left: 50%;
-   transform: translateX(-50%);
-   text-align: center;
-   font-size: 150%;
-   background: transparent;
- }
-
- /* QUANDO SEI AFFACCIATO SULLA FINESTRA */
-
- #salta {
-   position: fixed;
-   bottom: 50%;
-   left: 50%;
-   transform: translateX(-50%);
-   text-align: center;
-   font-size: 250%;
-   background: transparent;
- }
-
- #porta {
-   padding: 12px 20px;
-   position: fixed;
-   top: 40%;
-   left: 10%;
-   transform: translateX(-50%);
-   text-align: center;
-   font-size: 25px;
-   background: transparent;
- }
-
- /* QUESTO E' UN BOTTONE INVISIBLE, E' NELLA CAMERA E TI PORTA 
-                      ALLA FINESTRA PRIMA DI COMBATTERE CONTRO LA PORTA */
-
- #snake {
-   position: fixed;
-   top: 1%;
-   right: 0%;
-   height: 70%;
-   width: 10%;
-   transform: translateX(-50%);
-   text-align: center;
-   font-size: 25px;
-   background: transparent;
-   border: none;
-   cursor: pointer;
- }
-
- #medicine{
-   padding: 12px 20px;
-   position: fixed;
-   top: 40%;
-   right: 10%;
-   transform: translateX(-50%);
-   text-align: center;
-   font-size: 25px;
-   background: transparent;
- }
-
- #indietroBagno{
-   padding: 12px 20px;
-   position: fixed;
-   bottom: 10%;
-   right: 50%;
-   transform: translateX(-50%);
-   text-align: center;
-   font-size: 25px;
-   background: transparent;
- }
-
-
- /*  QUESTO BOTTONE FA INIZIARE LA BOSSFIGHT CONTRO I CEREALI */
- #bottonebosscereale {
-   padding: 12px 20px;
-   position: fixed;
-   bottom: 60%;
-   left: 50%;
-   transform: translateX(-50%);
-   text-align: center;
-   font-size: 4rem;
-   background: transparent;
- }
-
- .bottone{
-   padding: 12px 20px;
-   position: fixed;
-   transform: translateX(-50%);
-   text-align: center;
-   font-size: 4rem;
-   background: transparent;
-  }
  /* questa classe, .background, si riferisce a ogni singola immagine di sfondo
  e setta le proprietà di uno sfondo a ognuna di esse, dicesi che occupano tutto lo schermo,
  sono fisse, stanno dietro a tutti gli altri elementi*/
@@ -287,7 +35,7 @@
    object-fit: cover;
    /* serve a far adattare l'immagine allo schermo */
    z-index: -1;
-   /* fa andare lìimmagine dietro tutti gli altri elementi */
+   /* fa andare l'immagine dietro tutti gli altri elementi */
   }
 
 .textboxBasso{
@@ -361,3 +109,13 @@
  #overlay.visible {
    opacity: 0;
  }
+
+#pillole{
+  position: fixed;
+  width: 5%;
+  height: 15%;
+  bottom: 28%;
+  right: 49%;
+}
+
+ 

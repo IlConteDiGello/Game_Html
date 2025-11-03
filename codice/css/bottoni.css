@@ -1,0 +1,158 @@
+ /*Foglio di stile con definizione dei bottoni*/
+
+ .bottone{
+  padding: 12px 20px;
+  position: fixed;
+  transform: translateX(-50%);
+  text-align: center;
+  background: rgba(212, 212, 212, 0.3);
+  transition: background 0.25s;
+ }
+
+  .bottone:hover{
+    background: rgba(212, 212, 212, 0.8);
+ }
+
+  /* setto posizione assoluta sui bottoni cosi rimangono sempre fissi in un punto*/
+
+ #menuInizio {
+   bottom: 55%;
+   left: 50%;
+   font-size: 125%;
+ }
+
+ #menuCrediti {
+   bottom: 40%;
+   left: 50%;
+   font-size: 125%;
+ }
+
+ #menuSchizzofrenia {
+   bottom: 25%;
+   left: 50%;
+   font-size: 125%;
+ }
+
+ /* QUANDO STAI SDRAIATO SUL LETTO */
+ #alzati {
+   height: 100px;
+   width: 200px;
+   top: 20%;
+   left: 10%;
+   font-size: 125%;
+ }
+
+ /* MECCANICA BASE DI SASSO CARTA FORBICE */
+ #sasso {
+   bottom: 25%;
+   left: 43%;
+   font-size: 150%;
+ }
+
+ #carta {
+   bottom: 25%;
+   left: 50%;
+   font-size: 150%;
+ }
+
+ #forbice {
+   bottom: 25%;
+   left: 57%;
+   font-size: 150%;
+ }
+
+
+ /* QUA PER QUANDO SIAMO NEL CORRIDOIO */
+ #cucinaBottone {
+   bottom: 50%;
+   right: 30%;
+   font-size: 150%;
+ }
+
+ #scalaBottone{
+  bottom: 50%;
+  left: 20%;
+  font-size: 150%;
+ }
+
+ #bagno {
+   bottom: 50%;
+   left: 50%;
+   font-size: 150%;
+ }
+
+ #garageBottone {
+   bottom: 50%;
+   left: 50%;
+   font-size: 4rem;
+ }
+
+ /* QUANDO SEI AFFACCIATO SULLA FINESTRA */
+
+ #salta {
+   bottom: 50%;
+   left: 50%;
+   font-size: 250%;
+ }
+
+ #portaCamera {
+   top: 40%;
+   left: 10%;
+   font-size: 25px;
+ }
+
+ /* QUESTO E' UN BOTTONE INVISIBLE, E' NELLA CAMERA E TI PORTA 
+  ALLA FINESTRA PRIMA DI COMBATTERE CONTRO LA PORTA */
+
+ #finestra{
+  top: 1%;
+  right: 0%;
+  height: 70%;
+  width: 10%;
+  font-size: 25px;
+  border: none;
+  cursor: pointer;
+  background: transparent;
+ }
+
+ #finestra.nascosto {
+  top: 1%;
+  right: 0%;
+  height: 70%;
+  width: 10%;
+  font-size: 25px;
+  border: none;
+  cursor: pointer;
+ }
+
+ #medicine{
+   top: 40%;
+   right: 10%;
+   font-size: 25px;
+ }
+
+ #indietro{
+   bottom: 5%;
+   left: 7%;
+   font-size: 25px;
+ }
+
+
+ /*  QUESTO BOTTONE FA INIZIARE LA BOSSFIGHT CONTRO I CEREALI */
+ #bossCereali {
+   bottom: 60%;
+   left: 50%;
+   font-size: 4rem;
+ }
+
+ #vaiNelBosco{
+  top: 30%;
+  left: 30%;
+  font-size: 4rem;
+ }
+
+ #soggiornoBottone{
+   bottom: 60%;
+   left: 10%;
+   font-size: 150%;
+ }
