@@ -129,6 +129,21 @@ function creaBottoneBossCereali(){
   }
 }
 
+function guidare(){
+  if(!preseMedicine){
+    let bottone = document.createElement("input");
+
+    bottone.type = "button";
+    bottone.value = "Vai nel bosco";
+    bottone.id = "guidaNelBosco";
+    bottone.classList.add("bottone"); 
+    bottone.onclick = function(){
+      apri('Bosco.html')
+    }
+    document.getElementById("bottonePerGuidareNelBoscoConUnNomeMoltoLungoNeancheIoSoPerchè").appendChild(bottone);
+  }
+}
+
 /*
 function controlloPortaBattuta(){
   let bottoneFinestra = document.getElementById("finestra");
