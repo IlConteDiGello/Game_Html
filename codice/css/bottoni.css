@@ -39,7 +39,7 @@
    width: 200px;
    top: 20%;
    left: 10%;
-   font-size: 125%;
+   font-size: 3rem;
  }
 
  /* MECCANICA BASE DI SASSO CARTA FORBICE */
@@ -109,20 +109,18 @@
   right: 0%;
   height: 70%;
   width: 10%;
-  font-size: 25px;
+  font-size: 2rem;
   border: none;
   cursor: pointer;
   background: transparent;
  }
 
- #finestra.nascosto {
+ #finestra.visibile {
   top: 1%;
   right: 0%;
   height: 70%;
   width: 10%;
   font-size: 25px;
-  border: none;
-  cursor: pointer;
  }
 
  #medicine{
@@ -155,4 +153,40 @@
    bottom: 60%;
    left: 10%;
    font-size: 150%;
+ }
+
+ #guida{
+   bottom: 50%;
+   left: 50%;
+   font-size: 4rem;
+ }
+
+ #guidaALavoro{
+   bottom: 50%;
+   left: 30%;
+   font-size: 4rem;
+ }
+
+ #guidaNelBosco{
+   bottom: 50%;
+   left: 60%;
+   font-size: 4rem;
+ }
+
+ #bottoneColazione{
+   bottom: 60%;
+   left: 50%;
+   font-size: 4rem;
+ }
+
+ #colazione{
+   bottom: 60%;
+   left: 50%;
+   font-size: 4rem;
+ }
+
+ #procedi{
+  bottom: 60%;
+   left: 50%;
+   font-size: 4rem;
  }

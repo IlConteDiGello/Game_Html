@@ -13,8 +13,38 @@
   <div> <img class="background" src="../immagini/camera.png"></div>
   <div id="overlay"></div>
 
+  <!--<button class="bottone" id="portaCamera" onclick="apri('Boss_Porta.html')">Esci dalla porta</button>-->
   <button class="bottone" id="finestra" onclick="apri('Finestra.html')"></button>
   <textarea class="textboxBasso">Dovrei prendere le medicine.</textarea>
+
+  <script>
+
+    //se non si ha ancora giocato contro la porta carica il bottone 'porta'
+    if(sessionStorage.getItem('giocatoControPorta') === 'false'){
+      let bottone = document.createElement("button");
+      bottone.innerHTML = "Porta";
+      bottone.id = "portaCamera";
+      bottone.classList.add("bottone"); 
+      bottone.onclick = () => apri('Boss_Porta.html');
+      document.body.appendChild(bottone);
+    }
+
+    //se si ha giocato contro la porta e si ha vinto
+    if(sessionStorage.getItem('giocatoControPorta') === 'true' && sessionStorage.getItem('vintoBossPorta') === 'true'){
+      let bottone = document.createElement("button");
+      bottone.innerHTML = "Porta";
+      bottone.id = "portaCamera";
+      bottone.classList.add("bottone"); 
+      bottone.onclick = () => apri('Corridoio.html');
+      document.body.appendChild(bottone);
+    }
+
+    //se si ha giocato contro la porta e si ha perso rende visibile il bottone finestra
+    if(sessionStorage.getItem('giocatoControPorta') === 'true' && sessionStorage.getItem('vintoBossPorta') === 'false'){
+      let finestra = document.getElementById('finestra');
+      finestra.classList.add('visible');
+    }
+  </script>
 </body>
 
 </html>

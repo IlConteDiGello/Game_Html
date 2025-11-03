@@ -2,6 +2,8 @@
 
 let viteComputer = 3;
 let viteGiocatore = 3;
+let preseMedicine = sessionStorage.getItem('preseMedicine') === 'false';
+
 
 /********************FUNZIONI********************/
 
@@ -13,22 +15,8 @@ function inizia () {
   apri('sdraiato.html');
 }
 
-//sessionStorage.setItem serve a memorizzre un dato fino a che non viene chiusa la finestra di browser, quindi un dato rimane memorizzato per tutta la sessione di gioco
-//ci serve per memorizzare cose come se sono state prese le medicine, se è stata vinta una battaglia
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+//////////////////////////////////////////////
 
 
 function disegnaVite(ViteId, numeroVite) {
@@ -50,14 +38,8 @@ function disegnaVite(ViteId, numeroVite) {
   }
 }
 
-/*window.onload = function() {
-  const pagina = window.location.pathname; // es: "/gioco/boss.html"
 
-  if (pagina.includes("Boss")) {
-    disegnaVite("viteGiocatore", viteGiocatore);
-    disegnaVite("viteComputer", viteComputer);
-  }
-}*/
+///////////////////////////////////////////////
 
 
 function saCaFo(input, urlSeVince, urlSePerde) {
@@ -65,12 +47,12 @@ function saCaFo(input, urlSeVince, urlSePerde) {
   console.log(computer);
 
   if (computer == input){
-    alert('pari');
+    alert('è un pareggio!');
   }
 
   //se vince il computer
   if (computer == 1 && input == 0 || computer == 0 && input == 1 || computer == 0 && input == 2){
-    alert('computer');
+    alert('Hai perso il turno!');
     viteGiocatore--;
     if (viteGiocatore === 0){
       if (document.body.id === 'porta')
@@ -82,7 +64,7 @@ function saCaFo(input, urlSeVince, urlSePerde) {
 
   //se vince il giocatore
   if (computer == 2 && input == 0 || computer == 2 && input == 1 || computer == 1 && input == 2){
-    alert('giocatore');
+    alert('Hai vinto il turno!');
     viteComputer--;
     if (viteComputer === 0){
       if (document.body.id === 'porta')
@@ -95,21 +77,7 @@ function saCaFo(input, urlSeVince, urlSePerde) {
 }
 
 
-
-//funzione per creare bottone che ti fa andare avanti dopo che hai vinto contro la fucking porta
-
-function creaBottoneCorridoio(){
-  let bottone = document.createElement("input");
-
-  bottone.type="button";
-  bottone.value="avanza nel corridoio";
-  bottone.id="corridoio";
-  bottone.classList.add("bottone");
-  bottone.onclick = function(){
-    apri('Corridoio.html');
-  }
-  document.getElementById("bottoneVittoriaPorta").appendChild(bottone);
-}
+///////////////////////////////////////////////////////////////////////////
 
 
 //apre la nuova pagina applicando un effetto di transizione (fade-out)
@@ -124,16 +92,21 @@ function apri(pagina){
 //
 
 function prendiMedicine(){
+  preseMedicine = true;
   sessionStorage.setItem('preseMedicine', true);
 }
 
 //
 
 function creaBottoneBossCereali(){
-  if(!preseMedicine){
-    let bottone = document.createElement("button");
 
-    bottone.innerHTML = "Fai colazione";
+  let preseMedicine = sessionStorage.getItem('preseMedicine') === 'false';
+
+  if(preseMedicine){
+    let bottone = document.createElement("input");
+
+    bottone.type = "button";
+    bottone.value = "Fai colazione?";
     bottone.id = "bossCereali";
     bottone.classList.add("bottone"); 
     bottone.onclick = function(){
@@ -142,103 +115,45 @@ function creaBottoneBossCereali(){
     document.getElementById("bottoneCattivo").appendChild(bottone);
     
   }
-}
+  else{
+    let bottone = document.createElement("input");
 
-function loadCamera(){
-
-  //se non si ha ancora giocato contro la porta carica il bottone 'porta'
-  if(!sessionStorage.getItem('giocatoControPorta')){
-    let bottone = document.createElement("button");
-    bottone.innerHTML = "Porta";
-    bottone.id = "portaCamera";
+    bottone.type = "button";
+    bottone.value = "Fai colazione";
+    bottone.id = "colazione";
     bottone.classList.add("bottone"); 
-    bottone.onclick = "apri('Boss_Porta.html')";
-    document.body.appendChild(bottone);
+    bottone.onclick = function(){
+      apri('colazione.html')
+    }
+    document.getElementById("bottoneCattivo").appendChild(bottone);
   }
-
-  //se si ha giocato contro la porta e si ha vinto
-  if(sessionStorage.getItem('giocatoControPorta') && sessionStorage.getItem('vintoBossPorta')){
-    let bottone = document.createElement("button");
-    bottone.innerHTML = "Porta";
-    bottone.id = "portaCamera";
-    bottone.classList.add("bottone"); 
-    bottone.onclick = "apri('Corridoio.html')";
-    document.body.appendChild(bottone);
-  }
-
 }
 
-function loadPorta(){
-  disegnaVite("viteGiocatore", viteGiocatore);
-  disegnaVite("viteComputer", viteComputer);
-  sessionStorage.setItem("giocatoControPorta", true);
-}
+/*
+function controlloPortaBattuta(){
+  let bottoneFinestra = document.getElementById("finestra");
+  if(giocatoControPorta){
+  bottoneFinestra.classList.add("visibile");
+  bottoneFinestra.value="Buttati dalla finestra";}
+}*/
 
 
 
 /*****************EVENT LISTENERS***************/
 
 addEventListener('load', () => {
-  
-  //identifica la carica e ne carica dinamicamente alcuni elementi
-  switch (document.body.id) 
-  {
-    /*case "cucina":
-      loadCucina();
-      break;*/
-
-    case "porta":
-      loadPorta();
-      break;
-
-    /*case "dio":
-      loadDio();
-      disegnaVite("viteGiocatore", viteGiocatore);
-      disegnaVite("viteComputer", viteComputer);
-      break;*/
-    
-    case "camera":
-      loadCamera();
-      break;
-
-  }
-
-
-  //transizione tra le pagine (fade-in)
   let overlay = document.getElementById('overlay');
   overlay.classList.add('visible');
-
 })
 
+
+function cambiaSfondoColazione(){
+  const bottonecolazione = document.getElementById("bottoneColazione");
+  const sfondo = document.getElementById("sfondoColazione");
+
+  sfondo.src = "../immagini/colazioneFatta.png";
+}
 //
-/*
-document.addEventListener("DOMContentLoaded", () => {
-  switch (document.body.id) 
-  {
-    case "cucina":
-      creaBottoneBossCereali();
-      break;
-
-    case "porta":
-      if (!localStorage.getItem("giocatoControPorta")) {
-        disegnaVite("viteGiocatore", viteGiocatore);
-        disegnaVite("viteComputer", viteComputer);
-        localStorage.setItem("giocatoControPorta", true);
-      }
-      else
-        creaBottoneCorridoio();
-      break;
-
-    case "dio":
-      disegnaVite("viteGiocatore", viteGiocatore);
-      disegnaVite("viteComputer", viteComputer);
-      break;
-
-  }
-
-});
-
-*/
 
 
 //      AUDIO
@@ -249,3 +164,5 @@ function Passi(){
   audio.volume = 0.5;
   audio.play();
 }
+
+
