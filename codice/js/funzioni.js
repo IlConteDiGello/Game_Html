@@ -99,7 +99,7 @@ function creaBottoneBossCereali(){
 
   let preseMedicine = sessionStorage.getItem('preseMedicine') === 'false';
 
-  if(!preseMedicine){
+  if(preseMedicine){
     let bottone = document.createElement("input");
 
     bottone.type = "button";
@@ -127,7 +127,7 @@ function creaBottoneBossCereali(){
 }
 
 function guidare(){
-  if(!preseMedicine){
+  if(preseMedicine){
     let bottone = document.createElement("input");
 
     bottone.type = "button";
@@ -162,8 +162,10 @@ addEventListener('load', () => {
 function cambiaSfondoColazione(){
   const bottonecolazione = document.getElementById("bottoneColazione");
   const sfondo = document.getElementById("sfondoColazione");
+  let textbox = document.getElementById("textboxcolazione");
 
   sfondo.src = "../immagini/colazioneFatta.png";
+  textbox.value = "Oh No! Sono diventato una scatola di cereali! Aiuto!!!";
 }
 //
 
