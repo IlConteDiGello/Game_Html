@@ -2,6 +2,7 @@
 
 let viteComputer = 3;
 let viteGiocatore = 3;
+let preseMedicine = sessionStorage.getItem('preseMedicine') === 'false';
 
 /********************FUNZIONI********************/
 
@@ -98,14 +99,17 @@ function apri(pagina){
 //
 
 function prendiMedicine(){
-  sessionStorage.removeItem('preseMedicine');
+  preseMedicine = true;
   sessionStorage.setItem('preseMedicine', true);
 }
 
 //
 
 function creaBottoneBossCereali(){
-  if(!preseMedicine){
+
+  let preseMedicine = sessionStorage.getItem('preseMedicine') === 'false';
+
+  if(preseMedicine){
     let bottone = document.createElement("input");
 
     bottone.type = "button";

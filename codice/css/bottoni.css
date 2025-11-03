@@ -156,3 +156,21 @@
    left: 10%;
    font-size: 150%;
  }
+
+ #guida{
+   bottom: 50%;
+   left: 50%;
+   font-size: 4rem;
+ }
+
+ #guidaALavoro{
+   bottom: 50%;
+   left: 30%;
+   font-size: 4rem;
+ }
+
+ #guidaNelBosco{
+   bottom: 50%;
+   left: 60%;
+   font-size: 4rem;
+ }
