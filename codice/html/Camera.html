@@ -13,8 +13,8 @@
   <div> <img class="background" src="../immagini/camera.png"></div>
   <div id="overlay"></div>
 
-  <button class="bottone" id="finestra" onclick="apri('Finestra.html')"></button>
-  <textarea id="textbox">Dovrei prendere le medicine.</textarea>
+  <button class="bottone invisibile" id="finestra" onclick="apri('Finestra.html')"></button>
+  <textarea id="textbox"></textarea>
 
   <script>
     if(sessionStorage.getItem('preseMedicine') === 'false'){
@@ -45,7 +45,7 @@
     //se si ha giocato contro la porta e si ha perso rende visibile il bottone finestra
     if(sessionStorage.getItem('giocatoControPorta') === 'true' && sessionStorage.getItem('vintoBossPorta') === 'false'){
       let finestra = document.getElementById('finestra');
-      finestra.classList.add('visibile');
+      finestra.classList.add('visible');
       let textbox = document.getElementById('textbox');
       textbox.innerHTML = 'Non posso uscire dalla porta.';
     }
