@@ -104,23 +104,18 @@
  /* QUESTO E' UN BOTTONE INVISIBLE, E' NELLA CAMERA E TI PORTA 
   ALLA FINESTRA PRIMA DI COMBATTERE CONTRO LA PORTA */
 
- #finestra{
-  top: 1%;
-  right: 0%;
-  height: 70%;
-  width: 10%;
-  font-size: 2rem;
-  border: none;
-  cursor: pointer;
-  background: transparent;
- }
-
- #finestra.visibile {
+ #finestra {
   top: 1%;
   right: 0%;
   height: 70%;
   width: 10%;
   font-size: 25px;
+ }
+
+ #finestra.invisibile{
+  border: none;
+  cursor: pointer;
+  background: transparent;
  }
 
  #medicine{
