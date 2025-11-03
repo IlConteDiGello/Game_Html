@@ -38,7 +38,7 @@
    /* fa andare l'immagine dietro tutti gli altri elementi */
   }
 
-.textboxBasso{
+#textbox{
   resize: none;
   pointer-events: none;
   user-select: none;
@@ -62,6 +62,7 @@
 
   z-index: 998;
 }
+
 .textboxAlto{
   resize: none;
   pointer-events: none;

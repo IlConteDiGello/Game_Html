@@ -16,7 +16,18 @@
   <button class="bottone" id="medicine" onclick="prendiMedicine()">Prendi le medicine</button>
   <button class="bottone" id="indietro" onclick="apri('Corridoio.html')">Torna indietro</button>
   <img src="../immagini/pillole.png" id="pillole">
-  <textarea class="textboxBasso">Dovrei prendere le medicine.</textarea>
+  <textarea id="textbox"></textarea>
+
+  <script>
+    function prendiMedicine(){
+      if(sessionStorage.getItem('preseMedicine') === 'false')
+        sessionStorage.setItem('preseMedicine', true);
+      else {
+        let textbox = document.getElementById('textbox');
+        textbox[0].innerHTML = 'Le ho già prese.';
+      }
+    }
+  </script>
 </body>
 
 </html>

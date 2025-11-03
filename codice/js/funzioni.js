@@ -91,10 +91,7 @@ function apri(pagina){
 
 //
 
-function prendiMedicine(){
-  preseMedicine = true;
-  sessionStorage.setItem('preseMedicine', true);
-}
+
 
 //
 

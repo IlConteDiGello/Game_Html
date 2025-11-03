@@ -13,14 +13,13 @@
   <div> <img class="background" src="../immagini/camera.png"></div>
   <div id="overlay"></div>
 
-  <!--<button class="bottone" id="portaCamera" onclick="apri('Boss_Porta.html')">Esci dalla porta</button>-->
   <button class="bottone" id="finestra" onclick="apri('Finestra.html')"></button>
-  <textarea class="textboxBasso">Dovrei prendere le medicine.</textarea>
+  <textarea id="textbox">Dovrei prendere le medicine.</textarea>
 
   <script>
     if(sessionStorage.getItem('preseMedicine') === 'false'){
-      let textbox = document.getElementsByClassName('textboxBasso');
-      textbox[0].innerHTML = 'Dovrei prendere le medicine.';
+      let textbox = document.getElementById('textbox');
+      textbox.innerHTML = 'Dovrei prendere le medicine.';
     }
 
     //se non si ha ancora giocato contro la porta carica il bottone 'porta'
@@ -47,8 +46,8 @@
     if(sessionStorage.getItem('giocatoControPorta') === 'true' && sessionStorage.getItem('vintoBossPorta') === 'false'){
       let finestra = document.getElementById('finestra');
       finestra.classList.add('visible');
-      let textbox = document.getElementsByClassName('textboxBasso');
-      textbox[0].innerHTML = 'Non posso uscire dalla porta.';
+      let textbox = document.getElementById('textbox');
+      textbox.innerHTML = 'Non posso uscire dalla porta.';
     }
   </script>
 </body>
