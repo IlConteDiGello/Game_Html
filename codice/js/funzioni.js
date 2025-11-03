@@ -2,7 +2,6 @@
 
 let viteComputer = 3;
 let viteGiocatore = 3;
-let preseMedicine = sessionStorage.getItem('preseMedicine') === 'false';
 
 
 /********************FUNZIONI********************/
@@ -101,14 +100,7 @@ addEventListener('load', () => {
 })
 
 
-function cambiaSfondoColazione(){
-  const bottonecolazione = document.getElementById("bottoneColazione");
-  const sfondo = document.getElementById("sfondoColazione");
-  let textbox = document.getElementById("textboxcolazione");
 
-  sfondo.src = "../immagini/colazioneFatta.png";
-  textbox.value = "Oh No! Sono diventato una scatola di cereali! Aiuto!!!";
-}
 //
 
 

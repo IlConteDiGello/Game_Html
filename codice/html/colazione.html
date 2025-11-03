@@ -11,7 +11,19 @@
   <div id="overlay"></div>
   <div> <img class="background" id="sfondoColazione"src="../immagini/cereali.png"></div>
   <button class="bottone" id="bottoneColazione" onclick="cambiaSfondoColazione()">Mangia!</button>
-  <textarea id="textbox" id="textboxcolazione"></textarea>
+  <textarea id="textbox"></textarea>
+
+  <script>
+    function cambiaSfondoColazione(){
+      const bottonecolazione = document.getElementById("bottoneColazione");
+      const sfondo = document.getElementById("sfondoColazione");
+      document.getElementById('bottoneColazione').remove();
+      let textbox = document.getElementById("textbox");
+
+      sfondo.src = "../immagini/colazioneFatta.png";
+      textbox.innerHTML = "Oh No! Sono diventato una scatola di cereali! Aiuto!!!";
+}
+  </script>  
 </body>
 
 </html>
