@@ -2,23 +2,23 @@
 
  .bottone{
   padding: 12px 20px;
-  position: fixed;
+  position: fixed;  /*posizione fissa*/
   transform: translateX(-50%);
-  text-align: center;
-  background: rgba(212, 212, 212, 0.3);
-  transition: background 0.25s;
+  text-align: center; /*allinea il testo*/
+  background: rgba(212, 212, 212, 0.3); /*colore dello sfondo*/
+  transition: background 0.25s; /**/
  }
 
-  .bottone:hover{
-    background: rgba(212, 212, 212, 0.8);
+  .bottone:hover{ /*quando sei sopra con il mouse*/
+    background: rgba(212, 212, 212, 0.8); /*cambia colore dello sfondo*/
  }
 
   /* setto posizione assoluta sui bottoni cosi rimangono sempre fissi in un punto*/
 
  #menuInizio {
-   bottom: 50%;
-   left: 50%;
-   font-size: 4rem;
+   bottom: 50%; /*distanza dal fondo dello schermo*/
+   left: 50%; /*distanza dalla sinistra dello schermo*/
+   font-size: 4rem; /*grandezza delle scritte*/
  }
 
  /* QUANDO STAI SDRAIATO SUL LETTO */
