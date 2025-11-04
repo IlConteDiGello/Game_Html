@@ -16,21 +16,9 @@
   /* setto posizione assoluta sui bottoni cosi rimangono sempre fissi in un punto*/
 
  #menuInizio {
-   bottom: 55%;
+   bottom: 50%;
    left: 50%;
-   font-size: 125%;
- }
-
- #menuCrediti {
-   bottom: 40%;
-   left: 50%;
-   font-size: 125%;
- }
-
- #menuSchizzofrenia {
-   bottom: 25%;
-   left: 50%;
-   font-size: 125%;
+   font-size: 4rem;
  }
 
  /* QUANDO STAI SDRAIATO SUL LETTO */
