@@ -6,6 +6,7 @@ let viteGiocatore = 3;
 
 /********************FUNZIONI********************/
 
+//inizializza le variabili nel sessionStorage per mantenerle per tutta la sessione di gioco
 function inizia () {
   sessionStorage.setItem('preseMedicine', false);
   sessionStorage.setItem('vintoBossPorta', false);
@@ -18,6 +19,7 @@ function inizia () {
 //////////////////////////////////////////////
 
 
+//disegna nella pagina le vite durante i combattimenti
 function disegnaVite(ViteId, numeroVite) {
   //ViteId sarebbe che tipo di vite sono, quindi se si parla di vite del giocatore o del Boss
   const contenitore = document.getElementById(ViteId); 
@@ -40,8 +42,8 @@ function disegnaVite(ViteId, numeroVite) {
 
 ///////////////////////////////////////////////
 
-
-function saCaFo(input, urlSeVince, urlSePerde) {
+//per il combattimento di sasso carta forbice
+function sassoCartaForbice(input, urlSeVince, urlSePerde) {
   let computer = Math.floor(Math.random() * 3)
   console.log(computer);
 
@@ -88,17 +90,11 @@ function apri(pagina){
   }, 500);
 }
 
-//
-
-
 
 /*****************EVENT LISTENERS***************/
 
+//quando la pagina si apre applica un effetto di transizione (fade-in)
 addEventListener('load', () => {
   let overlay = document.getElementById('overlay');
   overlay.classList.add('visible');
 })
-
-
-
-//

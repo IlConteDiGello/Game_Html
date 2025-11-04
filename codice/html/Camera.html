@@ -17,6 +17,7 @@
   <textarea id="textbox"></textarea>
 
   <script>
+    //avverte il giocatore di prendere le medicine se non lo ha già fatto
     if(sessionStorage.getItem('preseMedicine') === 'false'){
       let textbox = document.getElementById('textbox');
       textbox.innerHTML = 'Dovrei prendere le medicine.';
