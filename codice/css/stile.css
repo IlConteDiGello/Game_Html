@@ -1,6 +1,5 @@
 @import url(bottoni.css);
 @import url(font.css);
-@import url(altro.css);
 
 /*Definizioni varie*/
 
@@ -91,4 +90,26 @@
   right: 49%;
 }
 
+.vite{
+    width: 25%;
+}
+
+#viteGiocatore{
+    width: 30%;
+    flex-direction: row-reverse;
+    position: fixed;
+    bottom: 7%;
+    right: 3%;
+    display: flex;
+    gap: 1%;
+}
+
+#viteComputer{
+    width: 30%;
+    position: fixed;
+    top: 7%;
+    left: 3%;
+    display: flex;
+    gap: 1%;
+}
  
