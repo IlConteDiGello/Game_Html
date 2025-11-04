@@ -20,8 +20,10 @@
 
   <script>
     function prendiMedicine(){
+      //se non si erano ancora prese le medicine aggiorna la variabile di stato
       if(sessionStorage.getItem('preseMedicine') === 'false')
         sessionStorage.setItem('preseMedicine', true);
+      //altrimenti avverte il giocatore di averle già prese
       else {
         let textbox = document.getElementById('textbox');
         textbox.innerHTML = 'Le ho già prese.';

@@ -16,7 +16,7 @@
   <button class="bottone" id="indietro" onclick="apri('soggiorno.html')">Torna indietro</button>
   
   <script>
-
+    //se si sono prese le medicine non si combatte contro la scatola di cereali (il bottone creato reindirizza a colazione.html)
     if (sessionStorage.getItem('preseMedicine') === 'true'){
       let bottone = document.createElement("input");
 
@@ -28,6 +28,7 @@
       document.getElementById("bottoneCattivo").appendChild(bottone);
     }
     else{
+      //altrimenti il bottone creato reindirizza alla pagina di combattimento (Boss_ScatolaDeiCereali.html)
       let bottone = document.createElement("input");
 
       bottone.type = "button";

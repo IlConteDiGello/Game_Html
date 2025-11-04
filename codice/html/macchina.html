@@ -14,13 +14,15 @@
 
   <div id="overlay"></div>
   <div> <img class="background" src="../immagini/dentroLaMacchina.png"></div>
-  <div id="bottonePerGuidareNelBoscoConUnNomeMoltoLungoNeancheIoSoPerchè"></div>
+  <div id="bottonePerGuidareConUnNomeMoltoLungoNeancheIoSoPerchè"></div>
   <button class="bottone" id="indietro" onclick="apri('Garage.html')">Torna indietro</button>
 
   <textarea id="textbox">Andiamo!</textarea>
 
   <script>
-    
+    //la generazione dinamica del bottone dipende dalla variabile di stato preseMedicine
+
+    //se vera genera il botone "Vai al lavoro"
     if(sessionStorage.getItem('preseMedicine') === 'true') {
       let bottone = document.createElement("button");
 
@@ -29,10 +31,11 @@
       bottone.classList.add("bottone"); 
       bottone.onclick = () => apri('nero.html');
 
-      document.getElementById("bottonePerGuidareNelBoscoConUnNomeMoltoLungoNeancheIoSoPerchè").appendChild(bottone);
+      document.getElementById("bottonePerGuidareConUnNomeMoltoLungoNeancheIoSoPerchè").appendChild(bottone);
     }
     
     else {
+      //altrimenti genera il botone "Vai nel bosco"
       let bottone = document.createElement("button");
 
       bottone.innerHTML = "Vai nel bosco";
@@ -40,7 +43,7 @@
       bottone.classList.add("bottone"); 
       bottone.onclick = () => apri('Bosco.html');
 
-      document.getElementById("bottonePerGuidareNelBoscoConUnNomeMoltoLungoNeancheIoSoPerchè").appendChild(bottone);
+      document.getElementById("bottonePerGuidareConUnNomeMoltoLungoNeancheIoSoPerchè").appendChild(bottone);
     }
   </script>
 </body>
